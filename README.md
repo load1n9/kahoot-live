@@ -4,7 +4,7 @@ A template that can be opened in Phaser Editor 2D.
 
 ## First steps
 
-This project requires [Node.js](https://nodejs.org) and [NPM.js](https://www.npmjs.com). It is recommended that you learn the basics of [ViteJS](https://vitejs.dev).
+This project requires [Node.js](https://nodejs.org) and [NPM.js](https://www.npmjs.com).
 
 * Install dependencies:
 
@@ -28,7 +28,7 @@ This project requires [Node.js](https://nodejs.org) and [NPM.js](https://www.npm
 
     It is generated in the `/dist` folder.
 
-## Run the editor
+## Run Phaser Editor
 
 * You can run the editor using the `editor` NPM script, defined in the `package.json` file:
 
