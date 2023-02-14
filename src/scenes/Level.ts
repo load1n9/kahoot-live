@@ -6,43 +6,42 @@ import Phaser from "phaser";
 
 export default class Level extends Phaser.Scene {
 
-	constructor() {
-		super("Level");
+    constructor() {
+        super("Level");
 
-		/* START-USER-CTR-CODE */
-		// Write your code here.
-		/* END-USER-CTR-CODE */
-	}
+        /* START-USER-CTR-CODE */
+        // Write your code here.
+        /* END-USER-CTR-CODE */
+    }
 
-	editorCreate(): void {
+    editorCreate(): void {
 
-		// text
-		const text = this.add.text(400, 436, "", {});
-		text.setOrigin(0.5, 0.5);
-		text.text = "Phaser 3 + Phaser Editor 2D\nVite + TypeScript";
-		text.setStyle({ "align": "center", "fontFamily": "Arial", "fontSize": "3em" });
+        // text
+        const text = this.add.text(400, 436, "", {});
+        text.setOrigin(0.5, 0.5);
+        text.text = "Phaser 3 + Phaser Editor 2D\nVite + TypeScript";
+        text.setStyle({"align": "center", "fontFamily": "Arial", "fontSize": "3em"});
 
-		// image
-		this.add.image(400, 243, "FufuSuperDino");
+        // image
+        this.add.image(400, 243, "FufuSuperDino");
 
-		this.events.emit("scene-awake");
-	}
+        this.events.emit("scene-awake");
+    }
 
-	/* START-USER-CODE */
+    /* START-USER-CODE */
 
-	// Write your code here
+    // Write your code here
 
-	preload()
-	{
-		//this.load.image("FufuSuperDino", '../../static/assets/FufuSuperDino.png')
-	}
+    preload() {
+        //this.load.image("FufuSuperDino", '../../static/assets/FufuSuperDino.png')
+    }
 
-	create() {
+    create() {
 
-		this.editorCreate();
-	}
+        this.editorCreate();
+    }
 
-	/* END-USER-CODE */
+    /* END-USER-CODE */
 }
 
 /* END OF COMPILED CODE */
