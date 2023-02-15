@@ -35,12 +35,24 @@ const obfuscatorOptions = {
 
 // https://vitejs.dev/config/
 export default defineConfig({
-    base: '',
+    base: '', // Empty string or ./ (for embedded deployment)
     publicDir: "static",
     resolve: {
         alias: {
-            '@': path.resolve(__dirname, './static')
+            '@': path.resolve(__dirname, './static'),
+            //'@client': path.resolve(__dirname, './static'),
         },
+    },
+    build: {
+        rollupOptions: {
+            external: [
+                /^vue$/,
+                /^@vue\/runtime-dom$/,
+                /^@vue\/reactivity$/,
+                /^@vue\/shared$/,
+                /^dist\//
+            ]
+        }
     },
     plugins: [
         obfuscatorPlugin({
@@ -49,7 +61,7 @@ export default defineConfig({
 
                 // If you want to exclude some files, you can return false
                 // Example: Exclude files ending in foo.js, foo.ts, and foo.tsx
-                if(/foo\.(js|tsx?)$/.test(path) || isVendor){
+                if (/foo\.(js|tsx?)$/.test(path) || isVendor) {
                     console.log(`[Obfuscator] Excluded "${path}"`)
                     return false
                 }
@@ -61,5 +73,5 @@ export default defineConfig({
                 ...obfuscatorOptions
             },
         }),
-        ],
+    ],
 });

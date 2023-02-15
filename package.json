@@ -15,7 +15,7 @@
     "vite-plugin-javascript-obfuscator": "^2.0.0"
   },
   "dependencies": {
-    "phaser": "^3.55.2",
-    "phasereditor2d-launcher": "^3.31.2"
+    "phaser": "^3.60.0-beta.18",
+    "phasereditor2d-launcher": "^3.60.0-beta.1"
   }
 }
