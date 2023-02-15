@@ -1,19 +1,20 @@
 /* START OF COMPILED CODE */
 
 import UserComponent from "./UserComponent";
-import Phaser from "phaser";
+/* START-USER-IMPORTS */
+/* END-USER-IMPORTS */
 
 export default class PreloadText extends UserComponent {
 
-	constructor(gameObject: Phaser.GameObjects.Text) {
+	constructor(gameObject) {
 		super(gameObject);
 
 		this.gameObject = gameObject;
-		(gameObject as any)["__PreloadText"] = this;
+		gameObject["__PreloadText"] = this;
 
 		/* START-USER-CTR-CODE */
 
-		this.scene.load.on(Phaser.Loader.Events.PROGRESS, (p: number) => {
+		this.scene.load.on(Phaser.Loader.Events.PROGRESS, (p) => {
 
 			this.gameObject.text = Math.floor(p * 100) + "%";
 		});
@@ -21,11 +22,13 @@ export default class PreloadText extends UserComponent {
 		/* END-USER-CTR-CODE */
 	}
 
-	static getComponent(gameObject: Phaser.GameObjects.Text): PreloadText {
-		return (gameObject as any)["__PreloadText"];
+	/** @returns {PreloadText} */
+	static getComponent(gameObject) {
+		return gameObject["__PreloadText"];
 	}
 
-	private gameObject: Phaser.GameObjects.Text;
+	/** @type {Phaser.GameObjects.Text} */
+	gameObject;
 
 	/* START-USER-CODE */
 

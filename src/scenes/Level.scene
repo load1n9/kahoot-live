@@ -6,8 +6,7 @@
         "autoImport": true,
         "preloadPackFiles": [],
         "createMethodName": "editorCreate",
-        "sceneKey": "Level",
-        "compilerOutputLanguage": "TYPE_SCRIPT"
+        "sceneKey": "Level"
     },
     "displayList": [
         {

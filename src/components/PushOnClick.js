@@ -4,26 +4,29 @@
 /* START OF COMPILED CODE */
 
 import UserComponent from "./UserComponent";
-import Phaser from "phaser";
+/* START-USER-IMPORTS */
+/* END-USER-IMPORTS */
 
 export default class PushOnClick extends UserComponent {
 
-	constructor(gameObject: Phaser.GameObjects.Image) {
+	constructor(gameObject) {
 		super(gameObject);
 
 		this.gameObject = gameObject;
-		(gameObject as any)["__PushOnClick"] = this;
+		gameObject["__PushOnClick"] = this;
 
 		/* START-USER-CTR-CODE */
 		// Write your code here.
 		/* END-USER-CTR-CODE */
 	}
 
-	static getComponent(gameObject: Phaser.GameObjects.Image): PushOnClick {
-		return (gameObject as any)["__PushOnClick"];
+	/** @returns {PushOnClick} */
+	static getComponent(gameObject) {
+		return gameObject["__PushOnClick"];
 	}
 
-	private gameObject: Phaser.GameObjects.Image;
+	/** @type {Phaser.GameObjects.Image} */
+	gameObject;
 
 	/* START-USER-CODE */
 

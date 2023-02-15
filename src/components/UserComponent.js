@@ -5,7 +5,7 @@ export default class UserComponent {
     /**
      * @param gameObject The entity.
      */
-    constructor(gameObject: Phaser.GameObjects.GameObject) {
+    constructor(gameObject) {
 
         this.scene = gameObject.scene;
 
@@ -13,7 +13,7 @@ export default class UserComponent {
         const listenStart = this.start !== UserComponent.prototype.start;
         const listenUpdate = this.update !== UserComponent.prototype.update;
         const listenDestroy = this.destroy !== UserComponent.prototype.destroy;
-        
+
         if (listenAwake) {
 
             this.scene.events.once("scene-awake", this.awake, this);
@@ -44,21 +44,21 @@ export default class UserComponent {
         }
     }
 
-    scene: Phaser.Scene;
+    scene;
 
-    protected awake() {
+    awake() {
         // override this
     }
 
-    protected start() {
+    start() {
         // override this
     }
 
-    protected update() {
+    update() {
         // override this
     }
 
-    protected destroy() {
+    destroy() {
         // override this
     }
 }
