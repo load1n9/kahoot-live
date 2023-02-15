@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/GachaClient.iml" filepath="$PROJECT_DIR$/.idea/GachaClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/gacha-client.iml" filepath="$PROJECT_DIR$/.idea/gacha-client.iml" />
     </modules>
   </component>
 </project>
