@@ -1,9 +1,9 @@
 // You can write more code here
+import PlayerScore from "./scoreboard_screen/PlayerScore";
 
 /* START OF COMPILED CODE */
 
 import Phaser from "phaser";
-import PlayerScore from "./scoreboard_screen/PlayerScore";
 import RoundedRectangleComponent from "../../../components/ui_components/RoundedRectangleComponent";
 import AutoSizeTextComponent from "../../../components/ui_components/AutoSizeTextComponent";
 /* START-USER-IMPORTS */
@@ -22,11 +22,8 @@ export default class ScoreboardScreen extends Phaser.GameObjects.Container {
 
 		// kahoot_game_safe_area
 		const kahoot_game_safe_area = scene.add.image(540, 960, "kahoot_game@4x", "kahoot_game/safe_area");
+		kahoot_game_safe_area.visible = false;
 		this.add(kahoot_game_safe_area);
-
-		// playerScore
-		const playerScore = new PlayerScore(scene, 369, 645);
-		this.add(playerScore);
 
 		// title_container
 		const title_container = scene.add.container(559, 51);
@@ -47,17 +44,24 @@ export default class ScoreboardScreen extends Phaser.GameObjects.Container {
 		const question_txt = scene.add.text(-17, 415, "", {});
 		question_txt.setOrigin(0.5, 0.5);
 		question_txt.text = "Scoreboard";
-		question_txt.setStyle({
-			"align": "center",
-			"color": "#333333",
-			"fontFamily": "Montserrat",
-			"fontSize": "70px",
-			"fontStyle": "bold",
-			"stroke": "#333333",
-			"strokeThickness": 3
-		});
+		question_txt.setStyle({ "align": "center", "color": "#333333", "fontFamily": "Montserrat", "fontSize": "70px", "fontStyle": "bold", "stroke": "#333333", "strokeThickness":3});
 		question_txt.setWordWrapWidth(820);
 		title_container.add(question_txt);
+
+		// v_list
+		const v_list = scene.add.container(0, 0);
+		this.add(v_list);
+
+		// v_list_elements
+		const v_list_elements = scene.add.container(0, 0);
+		v_list.add(v_list_elements);
+
+		// mask_rect
+		const mask_rect = scene.add.rectangle(69.9999771118164, 577.0000305175781, 950, 800);
+		mask_rect.setOrigin(0, 0);
+		mask_rect.visible = false;
+		mask_rect.isFilled = true;
+		this.add(mask_rect);
 
 		// rectangle_1 (components)
 		const rectangle_1RoundedRectangleComponent = new RoundedRectangleComponent(rectangle_1);
@@ -68,31 +72,110 @@ export default class ScoreboardScreen extends Phaser.GameObjects.Container {
 		question_txtAutoSizeTextComponent.maxWidth = 820;
 		question_txtAutoSizeTextComponent.maxHeight = 200;
 
-		this.playerScore = playerScore;
 		this.rectangle_1 = rectangle_1;
 		this.question_txt = question_txt;
+		this.v_list_elements = v_list_elements;
+		this.v_list = v_list;
+		this.mask_rect = mask_rect;
 
 		/* START-USER-CTR-CODE */
 		// Write your code here.
+		this._init();
 		/* END-USER-CTR-CODE */
 	}
 
-	/** @type {PlayerScore} */
-	playerScore;
 	/** @type {Phaser.GameObjects.Rectangle} */
 	rectangle_1;
 	/** @type {Phaser.GameObjects.Text} */
 	question_txt;
+	/** @type {Phaser.GameObjects.Container} */
+	v_list_elements;
+	/** @type {Phaser.GameObjects.Container} */
+	v_list;
+	/** @type {Phaser.GameObjects.Rectangle} */
+	mask_rect;
 
 	/* START-USER-CODE */
 
 	// Write your code here.
 
+	_init() {
+		this.renderMask();
+	}
+
 	renderScoreboard() {
 		const players = {
 			"its_gravix": {streak: 0, score: 0, displayName: "Gravix"},
-			"playjos": {streak: 0, score: 0, displayName: "PlayJos TV"}
+			"playjos": {streak: 0, score: 0, displayName: "PlayJos TV"},
+			"playjos2": {streak: 0, score: 0, displayName: "PlayJos TV2"},
+			"playjos23": {streak: 0, score: 0, displayName: "PlayJos TV3"},
+			"playjos234": {streak: 0, score: 0, displayName: "PlayJos TV3"},
+			"playjos235": {streak: 0, score: 0, displayName: "PlayJos TV3"},
+			"playjos236": {streak: 0, score: 0, displayName: "PlayJos TV3"},
+			"playjos232": {streak: 0, score: 0, displayName: "PlayJos TV3"},
+			"playjos2312": {streak: 0, score: 0, displayName: "PlayJos TV3"},
+			"playjos231": {streak: 0, score: 0, displayName: "PlayJos TV3"},
+			"playjosx2": {streak: 0, score: 0, displayName: "PlayJos TV2"},
+			"playjosg23": {streak: 0, score: 0, displayName: "PlayJos TV3"},
+			"playjnos234": {streak: 0, score: 0, displayName: "PlayJos TV3"},
+			"playjodss235": {streak: 0, score: 0, displayName: "PlayJos TV3"},
+			"playjvbos236": {streak: 0, score: 0, displayName: "PlayJos TV3"},
+			"playjoss232": {streak: 0, score: 0, displayName: "PlayJos TV3"},
+			"playjosx2312": {streak: 0, score: 0, displayName: "PlayJos TV3"},
+			"playjcxos231": {streak: 0, score: 0, displayName: "PlayJos TV3"},
+			"playajos232": {streak: 0, score: 0, displayName: "PlayJos TV3"},
+			"playcjos2312": {streak: 0, score: 0, displayName: "PlayJos TV3"},
+			"playjoxs231": {streak: 0, score: 0, displayName: "PlayJos TV3"},
+			"playjovsx2": {streak: 0, score: 0, displayName: "PlayJos TV2"},
+			"playjnbosg23": {streak: 0, score: 0, displayName: "PlayJos TV3"},
+			"playjnyos234": {streak: 0, score: 0, displayName: "PlayJos TV3"},
+			"playjohdss235": {streak: 0, score: 0, displayName: "PlayJos TV3"},
+			"playjvdfgbos236": {streak: 0, score: 0, displayName: "PlayJos TV3"},
+			"playjdghoss232": {streak: 0, score: 0, displayName: "PlayJos TV3"},
+			"playjtrosx2312": {streak: 0, score: 0, displayName: "PlayJos TV3"},
+			"playjfghcxos231": {streak: 0, score: 0, displayName: "PlayJos TV3"},
 		}
+
+		let i = 0;
+
+		for (const username in players) {
+			const player = players[username];
+			const scorePrefab = new PlayerScore(this.scene, 366, 630);
+			const y = 630 + (i * 130);
+
+			scorePrefab.setY(y);
+			this.v_list_elements.add(scorePrefab);
+
+			i++;
+		}
+
+		const lastY = (Math.max(0, Object.keys(players).length-5)) * 130;
+
+		this.v_list_elements.setY(-lastY);
+
+		setTimeout(() => {
+			this.scene.tweens.add({
+				targets: this.v_list_elements,
+				y: 0,
+				duration: 3000,
+				ease: 'Linear',
+				onComplete: function () {
+					setTimeout(() => {
+						// Next question!
+						console.log('next question! from scoreboard')
+					}, 2000);
+				}.bind(this)
+			});
+		}, 1000);
+	}
+
+	renderMask() {
+		const maskGraphics = this.scene.make.graphics();
+		maskGraphics.fillStyle(0xffffff); // Set the color of the mask (white in this case)
+		maskGraphics.fillRect(this.mask_rect.x, this.mask_rect.y, this.mask_rect.width, this.mask_rect.height);
+		const geometryMask = new Phaser.Display.Masks.GeometryMask(this.scene, maskGraphics);
+
+		this.v_list.setMask(geometryMask);
 	}
 
 	/* END-USER-CODE */

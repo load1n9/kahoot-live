@@ -38,19 +38,8 @@
                         "frame": "kahoot_game/safe_area"
                     },
                     "x": 540,
-                    "y": 960
-                },
-                {
-                    "prefabId": "9ee17190-01f5-4ed9-8402-6d534501f753",
-                    "id": "cc45a0e3-8081-4556-a21c-dc1c5ed9a0bf",
-                    "unlock": [
-                        "x",
-                        "y"
-                    ],
-                    "label": "playerScore",
-                    "scope": "CLASS",
-                    "x": 369,
-                    "y": 645
+                    "y": 960,
+                    "visible": false
                 },
                 {
                     "type": "Container",
@@ -109,6 +98,34 @@
                             "wordWrapWidth": 820
                         }
                     ]
+                },
+                {
+                    "type": "Container",
+                    "id": "8088c95a-0344-4500-89ce-3fe1ff439cf3",
+                    "label": "v_list",
+                    "scope": "CLASS",
+                    "list": [
+                        {
+                            "type": "Container",
+                            "id": "84383a2b-b624-4d8c-91f3-31838ac47a3b",
+                            "label": "v_list_elements",
+                            "scope": "CLASS"
+                        }
+                    ]
+                },
+                {
+                    "type": "Rectangle",
+                    "id": "e5b45e76-47f9-4c7e-abba-9c59f894ec0c",
+                    "label": "mask_rect",
+                    "scope": "CLASS",
+                    "x": 69.9999771118164,
+                    "y": 577.0000305175781,
+                    "originX": 0,
+                    "originY": 0,
+                    "visible": false,
+                    "isFilled": true,
+                    "width": 950,
+                    "height": 800
                 }
             ]
         }
