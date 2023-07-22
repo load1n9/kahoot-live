@@ -1,0 +1,236 @@
+{
+    "id": "ee109440-ca6a-4ba1-95b3-26c66ee990c8",
+    "sceneType": "PREFAB",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "preloadMethodName": "",
+        "preloadPackFiles": [],
+        "createMethodName": "",
+        "borderWidth": 1080,
+        "borderHeight": 1920
+    },
+    "displayList": [
+        {
+            "type": "Container",
+            "id": "908e26f4-874f-42c5-8a8d-be1d2275d78f",
+            "label": "container_1",
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "01c2915c-e9b6-4f7a-aa31-9abe854851af",
+                    "label": "kahoot_game_background_desert",
+                    "texture": {
+                        "key": "kahoot_game@4x",
+                        "frame": "kahoot_game/background_desert"
+                    },
+                    "x": 498,
+                    "y": 961,
+                    "scaleX": 2.406439323480412,
+                    "scaleY": 2.406439323480412
+                },
+                {
+                    "type": "Image",
+                    "id": "a21cc25d-3cd6-4b6e-bb66-272316861d00",
+                    "label": "kahoot_game_study_background",
+                    "texture": {
+                        "key": "kahoot_game@4x",
+                        "frame": "kahoot_game/study_background"
+                    },
+                    "x": 513,
+                    "y": 967,
+                    "scaleX": 1.6318017983590587,
+                    "scaleY": 1.6318017983590587,
+                    "visible": false
+                },
+                {
+                    "type": "Image",
+                    "id": "90d4e3c6-ffdf-41aa-98d0-ff0cfda23414",
+                    "label": "kahoot_game_safe_area",
+                    "texture": {
+                        "key": "kahoot_game@4x",
+                        "frame": "kahoot_game/safe_area"
+                    },
+                    "x": 540,
+                    "y": 960,
+                    "visible": false
+                },
+                {
+                    "type": "Container",
+                    "id": "1f50c29c-81f5-4d36-8f6a-fc4c2ee7debe",
+                    "label": "title_container",
+                    "x": 559,
+                    "y": 51,
+                    "list": [
+                        {
+                            "type": "Container",
+                            "id": "9e7fb0b5-c296-4e8a-a70a-1a3c19a41eaf",
+                            "label": "container_2",
+                            "list": [
+                                {
+                                    "type": "Rectangle",
+                                    "id": "0114747e-6189-4952-a23a-49c4e0482a27",
+                                    "label": "rectangle_1",
+                                    "scope": "CLASS",
+                                    "components": [
+                                        "RoundedRectangleComponent"
+                                    ],
+                                    "RoundedRectangleComponent.radius": 20,
+                                    "x": -19,
+                                    "y": 415,
+                                    "scaleY": 1.7110375531315227,
+                                    "isFilled": true,
+                                    "fillColor": "#ffffff",
+                                    "width": 820,
+                                    "height": 128
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Text",
+                            "id": "4ffe962e-45d5-463b-a271-6ac6f9bf1578",
+                            "label": "question_txt",
+                            "scope": "CLASS",
+                            "components": [
+                                "AutoSizeTextComponent"
+                            ],
+                            "AutoSizeTextComponent.maxWidth": 820,
+                            "AutoSizeTextComponent.maxHeight": 200,
+                            "x": -17,
+                            "y": 415,
+                            "originX": 0.5,
+                            "originY": 0.5,
+                            "text": "Loading Content",
+                            "align": "center",
+                            "fontFamily": "Montserrat",
+                            "fontSize": "70px",
+                            "fontStyle": "bold",
+                            "color": "#333333",
+                            "stroke": "#333333",
+                            "strokeThickness": 3,
+                            "wordWrapWidth": 820
+                        }
+                    ]
+                },
+                {
+                    "type": "Image",
+                    "id": "4852b29f-c69f-49f3-a9cb-e2b63c9a4821",
+                    "label": "kahoot_game_kahoot_logo_white",
+                    "texture": {
+                        "key": "kahoot_game@4x",
+                        "frame": "kahoot_game/kahoot_logo_white"
+                    },
+                    "x": 549,
+                    "y": 460,
+                    "scaleX": 0.61120847277933,
+                    "scaleY": 0.61120847277933,
+                    "visible": false
+                },
+                {
+                    "type": "Container",
+                    "id": "e3dce824-ef84-40a4-b2b2-261e0363d4dd",
+                    "label": "v_load",
+                    "x": 570,
+                    "y": 675,
+                    "scaleY": 0.6551982029952197,
+                    "list": [
+                        {
+                            "type": "Rectangle",
+                            "id": "e1933388-817c-4f69-9e99-1600a1fc65bb",
+                            "label": "load_rect",
+                            "scope": "CLASS",
+                            "components": [
+                                "RoundedRectangleComponent"
+                            ],
+                            "RoundedRectangleComponent.radius": 20,
+                            "x": -439,
+                            "y": 426,
+                            "originX": 0,
+                            "isFilled": true,
+                            "fillColor": "#46178F",
+                            "width": 30,
+                            "height": 50
+                        }
+                    ]
+                },
+                {
+                    "type": "Image",
+                    "id": "05b0aa61-f93c-4e30-93f5-73b52362b9b3",
+                    "label": "kahoot_game_test_content",
+                    "texture": {
+                        "key": "kahoot_game@4x",
+                        "frame": "kahoot_game/test_content"
+                    },
+                    "x": 536,
+                    "y": 756,
+                    "scaleX": 1.7658733585045037,
+                    "scaleY": 1.7658733585045037
+                },
+                {
+                    "type": "Container",
+                    "id": "a08bc7f5-1e5e-45ca-96ac-6b5298b22ddb",
+                    "label": "desc_container",
+                    "x": 559,
+                    "y": 677,
+                    "list": [
+                        {
+                            "type": "Container",
+                            "id": "268f5e9b-be39-4ead-be55-b57f48ea20b4",
+                            "label": "container_22",
+                            "list": [
+                                {
+                                    "type": "Rectangle",
+                                    "id": "c5ff8fc7-8b9a-4f2e-a19e-c46c3e07aabe",
+                                    "label": "rectangle_12",
+                                    "scope": "CLASS",
+                                    "components": [
+                                        "RoundedRectangleComponent"
+                                    ],
+                                    "RoundedRectangleComponent.radius": 20,
+                                    "x": -19,
+                                    "y": 415,
+                                    "scaleY": 1.7110375531315227,
+                                    "isFilled": true,
+                                    "fillColor": "#ffffff",
+                                    "width": 820,
+                                    "height": 128
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Text",
+                            "id": "ca01cdbd-f9c9-4619-95ef-73c9c2969634",
+                            "label": "desc_txt",
+                            "scope": "CLASS",
+                            "components": [
+                                "AutoSizeTextComponent"
+                            ],
+                            "AutoSizeTextComponent.maxWidth": 800,
+                            "AutoSizeTextComponent.maxHeight": 190,
+                            "x": -17,
+                            "y": 415,
+                            "originX": 0.5,
+                            "originY": 0.5,
+                            "text": "Choose the image that shows the correct computer part or device.",
+                            "lineSpacing": -2,
+                            "align": "center",
+                            "fontFamily": "Montserrat",
+                            "fontSize": "70px",
+                            "color": "#333333",
+                            "stroke": "#333333",
+                            "strokeThickness": 2,
+                            "wordWrapWidth": 820
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 4
+    }
+}

@@ -1,0 +1,118 @@
+{
+    "id": "9ee17190-01f5-4ed9-8402-6d534501f753",
+    "sceneType": "PREFAB",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "preloadMethodName": "",
+        "preloadPackFiles": [],
+        "createMethodName": "",
+        "borderWidth": 1080,
+        "borderHeight": 1920
+    },
+    "displayList": [
+        {
+            "type": "Container",
+            "id": "9d2633ae-d13b-4769-b7c9-7b721fd4551f",
+            "label": "container_1",
+            "list": [
+                {
+                    "type": "Container",
+                    "id": "ea37eeb0-894d-40d4-92e4-cc812936f603",
+                    "label": "container_2",
+                    "x": -225.75930786132812,
+                    "y": -64,
+                    "list": [
+                        {
+                            "type": "Rectangle",
+                            "id": "dab70bb7-ecfe-4b48-a49c-47f8bebe4129",
+                            "label": "round_rect",
+                            "scope": "CLASS",
+                            "components": [
+                                "RoundedRectangleComponent"
+                            ],
+                            "RoundedRectangleComponent.radius": 30,
+                            "x": 4.876708984375,
+                            "y": 64,
+                            "scaleX": 6.187082000375847,
+                            "scaleY": 0.8689002362039443,
+                            "originX": 0,
+                            "isFilled": true,
+                            "fillColor": "#3E0992",
+                            "width": 128,
+                            "height": 128
+                        }
+                    ]
+                },
+                {
+                    "type": "Container",
+                    "id": "6b956fb0-2c69-45ce-9c57-0fb996052576",
+                    "label": "v_center",
+                    "scope": "CLASS",
+                    "list": [
+                        {
+                            "type": "Text",
+                            "id": "9be2975a-34db-4984-883a-efc8fec4d6ba",
+                            "label": "name_txt",
+                            "scope": "CLASS",
+                            "components": [
+                                "AutoSizeTextComponent"
+                            ],
+                            "AutoSizeTextComponent.maxWidth": 430,
+                            "x": -83,
+                            "y": 1,
+                            "originY": 0.5,
+                            "text": "Gravix",
+                            "fontFamily": "Montserrat",
+                            "fontSize": "45px",
+                            "fontStyle": "bold",
+                            "color": "#ffffffff",
+                            "stroke": "#ffffffff",
+                            "strokeThickness": 1,
+                            "shadow.color": "#333333"
+                        },
+                        {
+                            "type": "Image",
+                            "id": "88728c03-b697-421b-890b-6b244ee37dd3",
+                            "label": "pfp_placeholder",
+                            "scope": "CLASS",
+                            "texture": {
+                                "key": "kahoot_game@4x",
+                                "frame": "kahoot_game/test_pfp.jpeg"
+                            },
+                            "x": -150,
+                            "scaleX": 0.7976676342067159,
+                            "scaleY": 0.7976676342067159
+                        },
+                        {
+                            "type": "Text",
+                            "id": "83593f96-4c1d-4939-8ab7-f1db188a8c7d",
+                            "label": "points_txt",
+                            "scope": "CLASS",
+                            "x": 550,
+                            "y": 1,
+                            "originX": 1,
+                            "originY": 0.5,
+                            "text": "14823",
+                            "align": "right",
+                            "fontFamily": "Montserrat",
+                            "fontSize": "45px",
+                            "fontStyle": "bold",
+                            "color": "#ffffffff",
+                            "stroke": "#ffffffff",
+                            "strokeThickness": 1,
+                            "shadow.color": "#333333"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 4
+    }
+}

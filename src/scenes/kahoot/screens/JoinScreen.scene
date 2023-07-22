@@ -1,0 +1,126 @@
+{
+    "id": "06d0d34b-68fa-442d-a084-260e2d26f420",
+    "sceneType": "PREFAB",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "preloadMethodName": "",
+        "preloadPackFiles": [],
+        "createMethodName": "",
+        "borderWidth": 1080,
+        "borderHeight": 1920
+    },
+    "displayList": [
+        {
+            "type": "Container",
+            "id": "0c88a78a-c7e9-4371-8efe-cfa6e2cea04c",
+            "label": "container_1",
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "d1c66a35-3f8e-4a79-bc75-332006d3bc2f",
+                    "label": "kahoot_game_study_background",
+                    "texture": {
+                        "key": "kahoot_game@4x",
+                        "frame": "kahoot_game/study_background"
+                    },
+                    "x": 519,
+                    "y": 965,
+                    "scaleX": 1.6318017983590587,
+                    "scaleY": 1.6318017983590587,
+                    "visible": false
+                },
+                {
+                    "type": "Image",
+                    "id": "5fc21919-68d5-4018-adaf-f199f0554088",
+                    "label": "kahoot_game_kahoot_logo_white",
+                    "texture": {
+                        "key": "kahoot_game@4x",
+                        "frame": "kahoot_game/kahoot_logo_white"
+                    },
+                    "x": 540,
+                    "y": 488,
+                    "scaleX": 0.25114910156892595,
+                    "scaleY": 0.25114910156892595
+                },
+                {
+                    "type": "Image",
+                    "id": "7994c7d5-ed0e-41be-94ff-d6286f47dab9",
+                    "label": "kahoot_game_safe_area",
+                    "texture": {
+                        "key": "kahoot_game@4x",
+                        "frame": "kahoot_game/safe_area"
+                    },
+                    "x": 540,
+                    "y": 960,
+                    "visible": false
+                },
+                {
+                    "type": "Container",
+                    "id": "5043cc37-da74-479c-ae41-954ecbcfbb9c",
+                    "label": "v_top_rectangle",
+                    "x": 540,
+                    "y": 306,
+                    "list": [
+                        {
+                            "type": "Container",
+                            "id": "659b91c3-afb6-4a2b-af80-ae87aa5a1eba",
+                            "label": "container_2",
+                            "list": [
+                                {
+                                    "type": "Rectangle",
+                                    "id": "201d4e61-1beb-47df-88cf-383b1089ed45",
+                                    "label": "rectangle_1",
+                                    "scope": "CLASS",
+                                    "components": [
+                                        "RoundedRectangleComponent"
+                                    ],
+                                    "y": 39,
+                                    "scaleX": 1.829790613068126,
+                                    "scaleY": 0.832015484335328,
+                                    "isFilled": true,
+                                    "fillColor": "#ffffff",
+                                    "width": 500,
+                                    "height": 128
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Text",
+                            "id": "994d91b3-d5df-4674-a529-c6b22321156b",
+                            "label": "text_1",
+                            "x": -3,
+                            "y": 38,
+                            "originX": 0.5,
+                            "originY": 0.5,
+                            "text": "Chat to join the game!",
+                            "fontFamily": "Montserrat",
+                            "fontSize": "48px",
+                            "color": "#333333",
+                            "stroke": "#333333",
+                            "strokeThickness": 2
+                        }
+                    ]
+                },
+                {
+                    "prefabId": "d2b48c1c-fe0f-4ef9-85e0-7af1a8106db9",
+                    "id": "da45ac78-3bf8-4d87-9a11-4bc8b62bf45e",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "joinedPlayerList",
+                    "x": 234,
+                    "y": 808
+                }
+            ]
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 4
+    }
+}

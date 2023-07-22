@@ -1,0 +1,123 @@
+{
+    "id": "59c6530e-7ffb-41e4-8f03-b8a784d3c1ba",
+    "sceneType": "PREFAB",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "preloadMethodName": "",
+        "preloadPackFiles": [],
+        "createMethodName": "",
+        "borderWidth": 1080,
+        "borderHeight": 1920
+    },
+    "displayList": [
+        {
+            "type": "Container",
+            "id": "01bc9bc0-0ba0-4d34-9e47-f30096f317c7",
+            "label": "container_1",
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "b9d255ab-1b64-43f2-8bed-9f52ba552871",
+                    "label": "kahoot_game_study_background",
+                    "texture": {
+                        "key": "kahoot_game@4x",
+                        "frame": "kahoot_game/study_background"
+                    },
+                    "x": 513,
+                    "y": 967,
+                    "scaleX": 1.6318017983590587,
+                    "scaleY": 1.6318017983590587
+                },
+                {
+                    "type": "Image",
+                    "id": "dd29b544-f2e0-418c-affa-fc115e99e94d",
+                    "label": "kahoot_game_safe_area",
+                    "texture": {
+                        "key": "kahoot_game@4x",
+                        "frame": "kahoot_game/safe_area"
+                    },
+                    "x": 540,
+                    "y": 960
+                },
+                {
+                    "prefabId": "9ee17190-01f5-4ed9-8402-6d534501f753",
+                    "id": "cc45a0e3-8081-4556-a21c-dc1c5ed9a0bf",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "playerScore",
+                    "scope": "CLASS",
+                    "x": 369,
+                    "y": 645
+                },
+                {
+                    "type": "Container",
+                    "id": "dfc41cfb-1b1d-4e1e-8093-9c89bcedb22b",
+                    "label": "title_container",
+                    "x": 559,
+                    "y": 51,
+                    "list": [
+                        {
+                            "type": "Container",
+                            "id": "462f900a-493a-4873-9a67-e3b53e87fd2d",
+                            "label": "container_2",
+                            "list": [
+                                {
+                                    "type": "Rectangle",
+                                    "id": "5bb93089-df6a-44dc-bdb3-5050cd90f611",
+                                    "label": "rectangle_1",
+                                    "scope": "CLASS",
+                                    "components": [
+                                        "RoundedRectangleComponent"
+                                    ],
+                                    "RoundedRectangleComponent.radius": 20,
+                                    "x": -19,
+                                    "y": 415,
+                                    "scaleX": 0.8883434456468009,
+                                    "scaleY": 1.0077639062574946,
+                                    "isFilled": true,
+                                    "fillColor": "#ffffff",
+                                    "width": 820,
+                                    "height": 128
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Text",
+                            "id": "b1397f19-fc0d-4999-98e1-cfaad4ec3385",
+                            "label": "question_txt",
+                            "scope": "CLASS",
+                            "components": [
+                                "AutoSizeTextComponent"
+                            ],
+                            "AutoSizeTextComponent.maxWidth": 820,
+                            "AutoSizeTextComponent.maxHeight": 200,
+                            "x": -17,
+                            "y": 415,
+                            "originX": 0.5,
+                            "originY": 0.5,
+                            "text": "Scoreboard",
+                            "align": "center",
+                            "fontFamily": "Montserrat",
+                            "fontSize": "70px",
+                            "fontStyle": "bold",
+                            "color": "#333333",
+                            "stroke": "#333333",
+                            "strokeThickness": 3,
+                            "wordWrapWidth": 820
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 4
+    }
+}

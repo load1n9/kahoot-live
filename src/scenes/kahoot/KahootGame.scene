@@ -1,0 +1,108 @@
+{
+    "id": "f6cff77c-028c-4614-a709-ea3d6f0232d8",
+    "sceneType": "PREFAB",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "preloadMethodName": "",
+        "preloadPackFiles": [],
+        "createMethodName": "",
+        "borderWidth": 1080,
+        "borderHeight": 1920
+    },
+    "displayList": [
+        {
+            "type": "Container",
+            "id": "18cb53f3-231a-4157-b4bd-19ab16378bb5",
+            "label": "container_1",
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "fae147a0-9e0f-487c-85dd-2c378821e488",
+                    "label": "game_background",
+                    "scope": "CLASS",
+                    "texture": {
+                        "key": "kahoot_game@4x",
+                        "frame": "kahoot_game/study_background"
+                    },
+                    "x": 513,
+                    "y": 963,
+                    "scaleX": 1.6318017983590587,
+                    "scaleY": 1.6318017983590587
+                },
+                {
+                    "prefabId": "06d0d34b-68fa-442d-a084-260e2d26f420",
+                    "id": "828fe190-de68-4418-b9f3-08ccdf156cf5",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "joinScreen",
+                    "x": 0,
+                    "y": 0,
+                    "visible": false
+                },
+                {
+                    "prefabId": "0c40e7b1-bf66-4b17-8b04-111a52187e50",
+                    "id": "994fae1d-3212-444a-9fe5-4904c83b3640",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "questionScreen",
+                    "scope": "CLASS",
+                    "x": 0,
+                    "y": 0,
+                    "visible": false
+                },
+                {
+                    "prefabId": "ee109440-ca6a-4ba1-95b3-26c66ee990c8",
+                    "id": "b1e6fac3-2784-4af7-b48c-41973bb03b1e",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "contentScreen",
+                    "scope": "CLASS",
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "prefabId": "5bf92373-11d5-4696-957f-836f2dc40569",
+                    "id": "8338fd64-a811-4a7f-889f-a6f261154068",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "quizScreen",
+                    "scope": "CLASS",
+                    "x": 0,
+                    "y": 0,
+                    "visible": true
+                },
+                {
+                    "prefabId": "59c6530e-7ffb-41e4-8f03-b8a784d3c1ba",
+                    "id": "8a355e44-6a70-4bdd-a38f-62e43db773c9",
+                    "unlock": [
+                        "x",
+                        "y"
+                    ],
+                    "label": "scoreboardScreen",
+                    "scope": "CLASS",
+                    "x": 0,
+                    "y": 0
+                }
+            ]
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 4
+    }
+}

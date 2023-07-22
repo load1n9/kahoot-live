@@ -4,35 +4,26 @@
     "settings": {
         "exportClass": true,
         "autoImport": true,
-        "preloadPackFiles": [],
+        "preloadPackFiles": [
+            "kahoot-live/static/assets/content/global/games/games-pack.json"
+        ],
         "createMethodName": "editorCreate",
-        "sceneKey": "Level"
+        "sceneKey": "Level",
+        "borderWidth": 1080,
+        "borderHeight": 1920
     },
     "displayList": [
         {
-            "type": "Text",
-            "id": "5c228da6-971a-4347-84e8-9f62464ba76d",
-            "label": "text",
-            "components": [],
-            "x": 400,
-            "y": 436,
-            "originX": 0.5,
-            "originY": 0.5,
-            "text": "Phaser 3 + Phaser Editor 2D\nVite + TypeScript",
-            "align": "center",
-            "fontFamily": "Arial",
-            "fontSize": "3em"
-        },
-        {
-            "type": "Image",
-            "id": "e76c3dfa-1a98-4174-a50e-d25a2aab6dd4",
-            "label": "image",
-            "components": [],
-            "texture": {
-                "key": "FufuSuperDino"
-            },
-            "x": 400,
-            "y": 243
+            "prefabId": "f6cff77c-028c-4614-a709-ea3d6f0232d8",
+            "id": "259bf7f1-669e-498d-a889-5e0763d755ad",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "kahootGame",
+            "scope": "PUBLIC",
+            "x": 0,
+            "y": 0
         }
     ],
     "plainObjects": [],
@@ -40,6 +31,6 @@
         "app": "Phaser Editor 2D - Scene Editor",
         "url": "https://phasereditor2d.com",
         "contentType": "phasereditor2d.core.scene.SceneContentType",
-        "version": 3
+        "version": 4
     }
 }

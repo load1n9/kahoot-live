@@ -3,6 +3,7 @@
 /* START OF COMPILED CODE */
 
 import Phaser from "phaser";
+import KahootGame from "./kahoot/KahootGame";
 /* START-USER-IMPORTS */
 /* END-USER-IMPORTS */
 
@@ -17,27 +18,30 @@ export default class Level extends Phaser.Scene {
 	}
 
 	/** @returns {void} */
+	preload() {
+
+		this.load.pack("games-pack", "assets/content/global/games/games-pack.json");
+	}
+
+	/** @returns {void} */
 	editorCreate() {
 
-		// text
-		const text = this.add.text(400, 436, "", {});
-		text.setOrigin(0.5, 0.5);
-		text.text = "Phaser 3 + Phaser Editor 2D\nVite + TypeScript";
-		text.setStyle({ "align": "center", "fontFamily": "Arial", "fontSize": "3em" });
+		// kahootGame
+		const kahootGame = new KahootGame(this, 0, 0);
+		this.add.existing(kahootGame);
 
-		// image
-		this.add.image(400, 243, "FufuSuperDino");
+		this.kahootGame = kahootGame;
 
 		this.events.emit("scene-awake");
 	}
+
+	/** @type {KahootGame} */
+	kahootGame;
 
 	/* START-USER-CODE */
 
     // Write your code here
 
-    preload() {
-        //this.load.image("FufuSuperDino", '../../static/assets/FufuSuperDino.png')
-    }
 
     create() {
 

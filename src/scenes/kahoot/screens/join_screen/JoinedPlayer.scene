@@ -1,0 +1,92 @@
+{
+    "id": "b3116652-b288-4b6f-b62f-05c58b21a5fa",
+    "sceneType": "PREFAB",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "preloadMethodName": "",
+        "preloadPackFiles": [],
+        "createMethodName": "",
+        "borderWidth": 1080,
+        "borderHeight": 1920
+    },
+    "displayList": [
+        {
+            "type": "Container",
+            "id": "cb060d9b-442c-4e00-b289-2f306b5d9911",
+            "label": "container_1",
+            "list": [
+                {
+                    "type": "Container",
+                    "id": "6d464c86-e2a0-4cc4-bdee-7c9535a269ef",
+                    "label": "container_2",
+                    "x": -225.75930786132812,
+                    "y": -64,
+                    "list": [
+                        {
+                            "type": "Rectangle",
+                            "id": "4b4aa7d7-b767-4ae1-92d1-3639bec88d96",
+                            "label": "round_rect",
+                            "scope": "CLASS",
+                            "components": [
+                                "RoundedRectangleComponent"
+                            ],
+                            "x": 225.75930786132812,
+                            "y": 64,
+                            "scaleX": 2.891520563173371,
+                            "scaleY": 0.8689002362039443,
+                            "isFilled": true,
+                            "width": 128,
+                            "height": 128
+                        }
+                    ]
+                },
+                {
+                    "type": "Container",
+                    "id": "c47163c8-5b4f-40a8-8ab0-86901334b0ac",
+                    "label": "v_center",
+                    "scope": "CLASS",
+                    "list": [
+                        {
+                            "type": "Text",
+                            "id": "da073bb2-a01c-476c-acd9-050d130eceb9",
+                            "label": "name_txt",
+                            "scope": "CLASS",
+                            "x": -66,
+                            "y": 1,
+                            "originY": 0.5,
+                            "text": "Gravix is cool",
+                            "fontFamily": "Montserrat",
+                            "fontSize": "52px",
+                            "fontStyle": "bold",
+                            "color": "#333333",
+                            "stroke": "#333333",
+                            "strokeThickness": 1,
+                            "shadow.color": "#333333"
+                        },
+                        {
+                            "type": "Image",
+                            "id": "65527ecc-e5f6-43ad-b36d-d42f21994def",
+                            "label": "pfp_placeholder",
+                            "scope": "CLASS",
+                            "texture": {
+                                "key": "kahoot_game@4x",
+                                "frame": "kahoot_game/test_pfp.jpeg"
+                            },
+                            "x": -119,
+                            "scaleX": 0.7976676342067159,
+                            "scaleY": 0.7976676342067159
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 4
+    }
+}

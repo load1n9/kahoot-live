@@ -1,0 +1,65 @@
+{
+    "components": [
+        {
+            "name": "RoundedRectangleComponent",
+            "baseClass": "UserComponent",
+            "gameObjectType": "Phaser.GameObjects.Rectangle",
+            "properties": [
+                {
+                    "name": "radius",
+                    "label": "Radius",
+                    "tooltip": "Corner radius",
+                    "defValue": 10,
+                    "customDefinition": false,
+                    "type": {
+                        "id": "number"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "AutoSizeTextComponent",
+            "baseClass": "UserComponent",
+            "gameObjectType": "Phaser.GameObjects.Text",
+            "properties": [
+                {
+                    "name": "maxWidth",
+                    "label": "Max Text Width",
+                    "tooltip": "Max width before decreasing text size",
+                    "defValue": 500,
+                    "customDefinition": false,
+                    "type": {
+                        "id": "number"
+                    }
+                },
+                {
+                    "name": "minTextSize",
+                    "label": "Minimum Text Size",
+                    "tooltip": "",
+                    "defValue": 16,
+                    "customDefinition": false,
+                    "type": {
+                        "id": "number"
+                    }
+                },
+                {
+                    "name": "maxHeight",
+                    "label": "Max Text Height",
+                    "tooltip": "",
+                    "defValue": 128,
+                    "customDefinition": false,
+                    "type": {
+                        "id": "number"
+                    }
+                }
+            ]
+        }
+    ],
+    "meta": {
+        "app": "Phaser Editor 2D - User Components Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.UserComponents"
+    },
+    "exportClass": true,
+    "autoImport": true
+}

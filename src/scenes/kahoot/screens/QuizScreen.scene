@@ -1,0 +1,466 @@
+{
+    "id": "5bf92373-11d5-4696-957f-836f2dc40569",
+    "sceneType": "PREFAB",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "preloadMethodName": "",
+        "preloadPackFiles": [],
+        "createMethodName": "",
+        "borderWidth": 1080,
+        "borderHeight": 1920
+    },
+    "displayList": [
+        {
+            "type": "Container",
+            "id": "908e26f4-874f-42c5-8a8d-be1d2275d78f",
+            "label": "container_1",
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "a21cc25d-3cd6-4b6e-bb66-272316861d00",
+                    "label": "kahoot_game_study_background",
+                    "texture": {
+                        "key": "kahoot_game@4x",
+                        "frame": "kahoot_game/study_background"
+                    },
+                    "x": 513,
+                    "y": 967,
+                    "scaleX": 1.6318017983590587,
+                    "scaleY": 1.6318017983590587
+                },
+                {
+                    "type": "Image",
+                    "id": "90d4e3c6-ffdf-41aa-98d0-ff0cfda23414",
+                    "label": "kahoot_game_safe_area",
+                    "texture": {
+                        "key": "kahoot_game@4x",
+                        "frame": "kahoot_game/safe_area"
+                    },
+                    "x": 540,
+                    "y": 960
+                },
+                {
+                    "type": "Image",
+                    "id": "4852b29f-c69f-49f3-a9cb-e2b63c9a4821",
+                    "label": "kahoot_game_kahoot_logo_white",
+                    "texture": {
+                        "key": "kahoot_game@4x",
+                        "frame": "kahoot_game/kahoot_logo_white"
+                    },
+                    "x": 549,
+                    "y": 460,
+                    "scaleX": 0.61120847277933,
+                    "scaleY": 0.61120847277933,
+                    "visible": false
+                },
+                {
+                    "type": "Container",
+                    "id": "1f50c29c-81f5-4d36-8f6a-fc4c2ee7debe",
+                    "label": "title_container",
+                    "x": 559,
+                    "y": 51,
+                    "list": [
+                        {
+                            "type": "Container",
+                            "id": "9e7fb0b5-c296-4e8a-a70a-1a3c19a41eaf",
+                            "label": "container_2",
+                            "list": [
+                                {
+                                    "type": "Rectangle",
+                                    "id": "0114747e-6189-4952-a23a-49c4e0482a27",
+                                    "label": "rectangle_1",
+                                    "scope": "CLASS",
+                                    "components": [
+                                        "RoundedRectangleComponent"
+                                    ],
+                                    "RoundedRectangleComponent.radius": 20,
+                                    "x": -19,
+                                    "y": 415,
+                                    "scaleY": 1.7110375531315227,
+                                    "isFilled": true,
+                                    "fillColor": "#ffffff",
+                                    "width": 820,
+                                    "height": 128
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Text",
+                            "id": "4ffe962e-45d5-463b-a271-6ac6f9bf1578",
+                            "label": "question_txt",
+                            "scope": "CLASS",
+                            "components": [
+                                "AutoSizeTextComponent"
+                            ],
+                            "AutoSizeTextComponent.maxWidth": 820,
+                            "AutoSizeTextComponent.maxHeight": 200,
+                            "x": -17,
+                            "y": 415,
+                            "originX": 0.5,
+                            "originY": 0.5,
+                            "text": "Loading Content",
+                            "align": "center",
+                            "fontFamily": "Montserrat",
+                            "fontSize": "70px",
+                            "fontStyle": "bold",
+                            "color": "#333333",
+                            "stroke": "#333333",
+                            "strokeThickness": 3,
+                            "wordWrapWidth": 820
+                        }
+                    ]
+                },
+                {
+                    "type": "Container",
+                    "id": "f00439d7-a658-4979-96e9-edc670cd32ef",
+                    "label": "v_answer_buttons",
+                    "scope": "CLASS",
+                    "list": [
+                        {
+                            "type": "Container",
+                            "id": "b1200b06-b021-4fd5-bbb1-e5a61cfd344c",
+                            "label": "layout2",
+                            "scope": "CLASS",
+                            "list": [
+                                {
+                                    "prefabId": "b2b1750e-7ffd-41d9-9b09-bcd502b966f6",
+                                    "id": "03852606-f555-418c-ba2f-812402f218da",
+                                    "unlock": [
+                                        "x",
+                                        "y",
+                                        "btnFillColor"
+                                    ],
+                                    "label": "btn2_1",
+                                    "scope": "CLASS",
+                                    "btnFillColor": "#F10E34",
+                                    "x": 337,
+                                    "y": 1066
+                                },
+                                {
+                                    "prefabId": "b2b1750e-7ffd-41d9-9b09-bcd502b966f6",
+                                    "id": "aa168673-d60b-4cd6-abc8-ce030d9522ec",
+                                    "unlock": [
+                                        "x",
+                                        "y",
+                                        "btnFillColor"
+                                    ],
+                                    "label": "btn2_2",
+                                    "scope": "CLASS",
+                                    "btnFillColor": "#0565daff",
+                                    "x": 744,
+                                    "y": 1066
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Container",
+                            "id": "e7f0c3f4-d296-4920-a328-b914b5b629ca",
+                            "label": "layout3",
+                            "scope": "CLASS",
+                            "visible": false,
+                            "list": [
+                                {
+                                    "prefabId": "b2b1750e-7ffd-41d9-9b09-bcd502b966f6",
+                                    "id": "08bda6fc-2f27-438d-8343-ec5afa9cdf48",
+                                    "unlock": [
+                                        "x",
+                                        "y",
+                                        "btnFillColor"
+                                    ],
+                                    "label": "btn_1",
+                                    "scope": "CLASS",
+                                    "btnFillColor": "#0565DA",
+                                    "x": 752,
+                                    "y": 1072
+                                },
+                                {
+                                    "prefabId": "b2b1750e-7ffd-41d9-9b09-bcd502b966f6",
+                                    "id": "97426f5c-1abb-4111-910b-9bfe146b95d6",
+                                    "unlock": [
+                                        "x",
+                                        "y",
+                                        "btnFillColor",
+                                        "scaleX",
+                                        "scaleY"
+                                    ],
+                                    "label": "btn_2",
+                                    "scope": "CLASS",
+                                    "btnFillColor": "#F10E34",
+                                    "x": 345,
+                                    "y": 1072,
+                                    "scaleX": 1,
+                                    "scaleY": 1
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Container",
+                    "id": "7b991ee0-a627-416e-9ff7-de021b0fd0ed",
+                    "label": "v_question_active",
+                    "scope": "CLASS",
+                    "visible": false,
+                    "list": [
+                        {
+                            "type": "Image",
+                            "id": "05b0aa61-f93c-4e30-93f5-73b52362b9b3",
+                            "label": "question_image",
+                            "scope": "CLASS",
+                            "texture": {
+                                "key": "kahoot_game@4x",
+                                "frame": "kahoot_game/test_content"
+                            },
+                            "x": 536,
+                            "y": 756,
+                            "scaleX": 1.7658733585045037,
+                            "scaleY": 1.7658733585045037
+                        },
+                        {
+                            "type": "Container",
+                            "id": "5b296202-f994-4277-81be-5949f442beb8",
+                            "label": "v_answer_count",
+                            "y": 19,
+                            "list": [
+                                {
+                                    "type": "Container",
+                                    "id": "b7836ede-ed49-4109-b273-b663ca94cde7",
+                                    "label": "container22",
+                                    "x": 929,
+                                    "y": 465,
+                                    "list": [
+                                        {
+                                            "type": "Rectangle",
+                                            "id": "1cf71639-d5d9-4750-a6d2-f0bb47175594",
+                                            "label": "rectangle_1222",
+                                            "scope": "CLASS",
+                                            "components": [
+                                                "RoundedRectangleComponent"
+                                            ],
+                                            "RoundedRectangleComponent.radius": 30,
+                                            "x": -22,
+                                            "y": 355,
+                                            "scaleX": 0.26349424979442865,
+                                            "scaleY": 0.4906609168710798,
+                                            "isFilled": true,
+                                            "fillColor": "#3E0992",
+                                            "width": 820,
+                                            "height": 128
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Ellipse",
+                                    "id": "cb82ef8d-42db-426d-ac4b-aa14efc76165",
+                                    "label": "ellipse_1",
+                                    "x": 907,
+                                    "y": 695,
+                                    "scaleX": 1.2177405076526764,
+                                    "scaleY": 1.2177405076526764,
+                                    "isFilled": true,
+                                    "fillColor": "#3E0992",
+                                    "width": 128,
+                                    "height": 128
+                                },
+                                {
+                                    "type": "Text",
+                                    "id": "33fce45a-20fe-43f2-aebf-f4958a338b41",
+                                    "label": "answers_txt",
+                                    "scope": "CLASS",
+                                    "components": [
+                                        "AutoSizeTextComponent"
+                                    ],
+                                    "AutoSizeTextComponent.maxWidth": 110,
+                                    "x": 908,
+                                    "y": 693,
+                                    "originX": 0.5,
+                                    "originY": 0.5,
+                                    "text": "99",
+                                    "align": "center",
+                                    "fontFamily": "Montserrat",
+                                    "fontSize": "75px",
+                                    "fontStyle": "bold",
+                                    "color": "#ffffffff",
+                                    "stroke": "#ffffffff",
+                                    "strokeThickness": 3,
+                                    "wordWrapWidth": 820
+                                },
+                                {
+                                    "type": "Text",
+                                    "id": "887885de-d259-4357-b040-4f607de84b77",
+                                    "label": "question_txt_2",
+                                    "scope": "CLASS",
+                                    "x": 908,
+                                    "y": 819,
+                                    "originX": 0.5,
+                                    "originY": 0.5,
+                                    "text": "Answers",
+                                    "align": "center",
+                                    "fontFamily": "Montserrat",
+                                    "fontSize": "35px",
+                                    "fontStyle": "bold",
+                                    "color": "#ffffffff",
+                                    "stroke": "#333333",
+                                    "wordWrapWidth": 820
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Container",
+                            "id": "dcd3f1a0-eeb8-4054-b2bd-25501771b7de",
+                            "label": "v_timer",
+                            "list": [
+                                {
+                                    "type": "Ellipse",
+                                    "id": "f0cc86cb-cbc1-4f44-992f-d27d6c67c7c5",
+                                    "label": "ellipse",
+                                    "x": 186,
+                                    "y": 757,
+                                    "scaleX": 1.2177405076526764,
+                                    "scaleY": 1.2177405076526764,
+                                    "isFilled": true,
+                                    "fillColor": "#3E0992",
+                                    "width": 128,
+                                    "height": 128
+                                },
+                                {
+                                    "type": "Text",
+                                    "id": "cf519cf4-42da-42ab-834a-c3c18c14bbeb",
+                                    "label": "timer_txt",
+                                    "scope": "CLASS",
+                                    "components": [
+                                        "AutoSizeTextComponent"
+                                    ],
+                                    "AutoSizeTextComponent.maxWidth": 110,
+                                    "x": 187,
+                                    "y": 755,
+                                    "originX": 0.5,
+                                    "originY": 0.5,
+                                    "text": "99",
+                                    "align": "center",
+                                    "fontFamily": "Montserrat",
+                                    "fontSize": "75px",
+                                    "fontStyle": "bold",
+                                    "color": "#ffffffff",
+                                    "stroke": "#ffffffff",
+                                    "strokeThickness": 3,
+                                    "wordWrapWidth": 820
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Container",
+                    "id": "3792c523-10e6-4fde-9989-ee6a9fd8c42a",
+                    "label": "v_percentages",
+                    "scope": "CLASS",
+                    "list": [
+                        {
+                            "type": "Container",
+                            "id": "a907fa85-b5d7-428b-a315-a535b19acaec",
+                            "label": "p_layout2",
+                            "scope": "CLASS",
+                            "list": [
+                                {
+                                    "prefabId": "df44d459-b57d-48c7-ba44-35ccc162a91d",
+                                    "id": "140e5f01-83c3-4b73-b79a-670e3b5c510c",
+                                    "unlock": [
+                                        "x",
+                                        "y",
+                                        "answerLetter",
+                                        "fillColor"
+                                    ],
+                                    "label": "percentage2_1",
+                                    "scope": "CLASS",
+                                    "fillColor": "#F10E34",
+                                    "x": 446,
+                                    "y": 872
+                                },
+                                {
+                                    "prefabId": "df44d459-b57d-48c7-ba44-35ccc162a91d",
+                                    "id": "d4a3b6b6-7ea6-4ff3-9763-87ce5b25192e",
+                                    "unlock": [
+                                        "x",
+                                        "y",
+                                        "fillColor"
+                                    ],
+                                    "label": "percentage2_2",
+                                    "scope": "CLASS",
+                                    "fillColor": "#0565daff",
+                                    "x": 636,
+                                    "y": 872
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Container",
+                            "id": "2bc20282-2982-4f34-a70e-b2c41a4ac123",
+                            "label": "p_layout4",
+                            "scope": "CLASS",
+                            "visible": false,
+                            "list": [
+                                {
+                                    "prefabId": "df44d459-b57d-48c7-ba44-35ccc162a91d",
+                                    "id": "5778277f-61b9-4be1-81c9-d7d8652e1426",
+                                    "unlock": [
+                                        "x",
+                                        "y"
+                                    ],
+                                    "label": "percentage4_1",
+                                    "scope": "CLASS",
+                                    "x": 253,
+                                    "y": 872
+                                },
+                                {
+                                    "prefabId": "df44d459-b57d-48c7-ba44-35ccc162a91d",
+                                    "id": "d541384b-d9d5-42a9-8dc5-28bd769b7c7a",
+                                    "unlock": [
+                                        "x",
+                                        "y"
+                                    ],
+                                    "label": "percentage4_2",
+                                    "scope": "CLASS",
+                                    "x": 443,
+                                    "y": 872
+                                },
+                                {
+                                    "prefabId": "df44d459-b57d-48c7-ba44-35ccc162a91d",
+                                    "id": "5ee10daf-5b36-4638-99e8-d486e221706f",
+                                    "unlock": [
+                                        "x",
+                                        "y"
+                                    ],
+                                    "label": "percentage4_3",
+                                    "scope": "CLASS",
+                                    "x": 633,
+                                    "y": 872
+                                },
+                                {
+                                    "prefabId": "df44d459-b57d-48c7-ba44-35ccc162a91d",
+                                    "id": "afd14c71-ee20-4435-88c5-68ff6b64ded3",
+                                    "unlock": [
+                                        "x",
+                                        "y"
+                                    ],
+                                    "label": "percentage4_4",
+                                    "scope": "CLASS",
+                                    "x": 823,
+                                    "y": 872
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 4
+    }
+}

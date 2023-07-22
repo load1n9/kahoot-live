@@ -1,0 +1,189 @@
+{
+	"textures": [
+		{
+			"image": "kahoot_game@4x-0.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 1802,
+				"h": 2004
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "kahoot_game/study_background",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 1800,
+						"h": 1200
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 1800,
+						"h": 1200
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 1800,
+						"h": 1200
+					}
+				},
+				{
+					"filename": "kahoot_game/background_desert",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 1200,
+						"h": 800
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 1200,
+						"h": 800
+					},
+					"frame": {
+						"x": 1,
+						"y": 1203,
+						"w": 1200,
+						"h": 800
+					}
+				},
+				{
+					"filename": "kahoot_game/test_content",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 224,
+						"h": 149
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 224,
+						"h": 149
+					},
+					"frame": {
+						"x": 1203,
+						"y": 1203,
+						"w": 224,
+						"h": 149
+					}
+				},
+				{
+					"filename": "kahoot_game/test_pfp.jpeg",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 100,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 100,
+						"h": 100
+					},
+					"frame": {
+						"x": 1429,
+						"y": 1203,
+						"w": 100,
+						"h": 100
+					}
+				},
+				{
+					"filename": "kahoot_game/checkmark-64",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 64,
+						"h": 64
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 64,
+						"h": 64
+					},
+					"frame": {
+						"x": 1429,
+						"y": 1305,
+						"w": 64,
+						"h": 64
+					}
+				}
+			]
+		},
+		{
+			"image": "kahoot_game@4x-1.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 1082,
+				"h": 1922
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "kahoot_game/safe_area",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 1080,
+						"h": 1920
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 1080,
+						"h": 1920
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 1080,
+						"h": 1920
+					}
+				}
+			]
+		},
+		{
+			"image": "kahoot_game@4x-2.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 1065,
+				"h": 368
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "kahoot_game/kahoot_logo_white",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 1063,
+						"h": 366
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 1063,
+						"h": 366
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 1063,
+						"h": 366
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:3046996637658ad61be884f9cf0165c6:7e9f96d5f9663c2bae17f24f3b957237:30dbb4abf859a453014efd793814117a$"
+	}
+}

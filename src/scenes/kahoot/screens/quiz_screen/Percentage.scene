@@ -1,0 +1,179 @@
+{
+    "id": "df44d459-b57d-48c7-ba44-35ccc162a91d",
+    "sceneType": "PREFAB",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "preloadMethodName": "",
+        "preloadPackFiles": [],
+        "createMethodName": "",
+        "borderWidth": 1080,
+        "borderHeight": 1920
+    },
+    "displayList": [
+        {
+            "type": "Container",
+            "id": "73aa031b-1967-4e8c-885f-68827041d7b7",
+            "label": "container_1",
+            "list": [
+                {
+                    "type": "Container",
+                    "id": "97888e3d-5ce0-469a-9c28-5af2461c1423",
+                    "label": "container_2",
+                    "list": [
+                        {
+                            "type": "Rectangle",
+                            "id": "f6d22364-0fdf-4c3c-a4f4-0f338d722151",
+                            "label": "rectangle1",
+                            "scope": "CLASS",
+                            "components": [
+                                "RoundedRectangleComponent"
+                            ],
+                            "RoundedRectangleComponent.radius": 20,
+                            "isFilled": true,
+                            "fillColor": "#F10E34",
+                            "width": 150,
+                            "height": 50
+                        }
+                    ]
+                },
+                {
+                    "type": "Rectangle",
+                    "id": "22f95489-f7bd-4a38-a24f-058a1730d0e5",
+                    "label": "square",
+                    "scope": "CLASS",
+                    "x": -45,
+                    "y": 1,
+                    "scaleX": 0.18121060731302335,
+                    "scaleY": 0.18121060731302335,
+                    "visible": false,
+                    "isFilled": true,
+                    "width": 128,
+                    "height": 128
+                },
+                {
+                    "type": "Ellipse",
+                    "id": "51960030-1087-41f5-ab17-0a896290705d",
+                    "label": "circle",
+                    "scope": "CLASS",
+                    "x": -45,
+                    "y": 2,
+                    "scaleX": 0.18121060248148646,
+                    "scaleY": 0.18121060248148646,
+                    "visible": false,
+                    "isFilled": true,
+                    "width": 128,
+                    "height": 128
+                },
+                {
+                    "type": "Rectangle",
+                    "id": "221f31bb-1296-45be-b95a-bdb5c5b19990",
+                    "label": "diamond",
+                    "scope": "CLASS",
+                    "x": -45,
+                    "y": 1,
+                    "scaleX": 0.14965033204746947,
+                    "scaleY": 0.14965033204746947,
+                    "angle": 45,
+                    "visible": false,
+                    "isFilled": true,
+                    "width": 128,
+                    "height": 128
+                },
+                {
+                    "type": "Triangle",
+                    "id": "736e8259-c36a-4715-9362-240bbb201e7f",
+                    "label": "triangle",
+                    "scope": "CLASS",
+                    "x": -45,
+                    "scaleX": 0.20825986285899373,
+                    "scaleY": 0.20825986285899373,
+                    "isFilled": true
+                },
+                {
+                    "type": "Container",
+                    "id": "43e408af-0495-4650-9b5d-00ee2dfea833",
+                    "label": "container2",
+                    "y": -56,
+                    "list": [
+                        {
+                            "type": "Rectangle",
+                            "id": "ae62b53f-33ed-4140-bbf4-0b91b587b0ca",
+                            "label": "rectangle2",
+                            "scope": "CLASS",
+                            "components": [
+                                "RoundedRectangleComponent"
+                            ],
+                            "RoundedRectangleComponent.radius": 20,
+                            "y": 25,
+                            "originY": 1,
+                            "isFilled": true,
+                            "fillColor": "#F10E34",
+                            "width": 150,
+                            "height": 200
+                        }
+                    ]
+                },
+                {
+                    "type": "Text",
+                    "id": "0ba1ea37-8176-4ed5-a609-3a2317620d6d",
+                    "label": "count_txt",
+                    "scope": "CLASS",
+                    "components": [
+                        "AutoSizeTextComponent"
+                    ],
+                    "AutoSizeTextComponent.maxWidth": 70,
+                    "AutoSizeTextComponent.maxHeight": 200,
+                    "x": -24,
+                    "originY": 0.5,
+                    "text": "1392",
+                    "lineSpacing": -4,
+                    "fontFamily": "Montserrat",
+                    "fontSize": "30px",
+                    "fontStyle": "bold",
+                    "color": "#FFFFFF",
+                    "stroke": "#c6c6c6ff",
+                    "shadow.offsetY": 4,
+                    "shadow.fill": true,
+                    "shadow.color": "#414040ff",
+                    "shadow.blur": 2,
+                    "wordWrapWidth": 330
+                },
+                {
+                    "type": "Image",
+                    "id": "41479b38-92aa-4b15-be36-3e1199e2636d",
+                    "label": "checkmark",
+                    "scope": "CLASS",
+                    "texture": {
+                        "key": "kahoot_game@4x",
+                        "frame": "kahoot_game/checkmark-64"
+                    },
+                    "x": 1,
+                    "y": -88,
+                    "scaleX": 0.853587639347312,
+                    "scaleY": 0.853587639347312,
+                    "visible": false
+                }
+            ]
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 4
+    },
+    "prefabProperties": [
+        {
+            "name": "fillColor",
+            "label": "fillColor",
+            "tooltip": "",
+            "defValue": "#ffffff",
+            "customDefinition": false,
+            "type": {
+                "id": "color"
+            }
+        }
+    ]
+}

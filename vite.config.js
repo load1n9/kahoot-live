@@ -16,7 +16,7 @@ const obfuscatorOptions = {
     identifierNamesCache: {},
     reservedStrings: ['@'],
     numbersToExpressions: true,
-    stringArray: true,
+    stringArray: false,
     stringArrayCallsTransform: true,
     stringArrayCallsTransformThreshold: 0.5,
     stringArrayEncoding: ['base64'],

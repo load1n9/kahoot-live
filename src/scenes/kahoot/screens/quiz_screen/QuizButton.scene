@@ -1,0 +1,161 @@
+{
+    "id": "b2b1750e-7ffd-41d9-9b09-bcd502b966f6",
+    "sceneType": "PREFAB",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "preloadMethodName": "",
+        "preloadPackFiles": [],
+        "createMethodName": "",
+        "borderWidth": 1080,
+        "borderHeight": 1920
+    },
+    "displayList": [
+        {
+            "type": "Container",
+            "id": "08845f6a-7874-49d6-af85-fc6868a25881",
+            "label": "layout2",
+            "list": [
+                {
+                    "type": "Container",
+                    "id": "bf9723f2-bd00-4d7c-a4d4-7de2d491c242",
+                    "label": "btn",
+                    "list": [
+                        {
+                            "type": "Text",
+                            "id": "18ddae6b-a4db-46a7-9a60-568522e62057",
+                            "label": "text_1",
+                            "x": -43,
+                            "y": 1.5,
+                            "originY": 0.5,
+                            "text": "New text"
+                        },
+                        {
+                            "type": "Rectangle",
+                            "id": "693aa91e-3301-471b-9bb4-06e7e4df1760",
+                            "label": "rectangle",
+                            "scope": "CLASS",
+                            "components": [
+                                "RoundedRectangleComponent"
+                            ],
+                            "RoundedRectangleComponent.radius": 20,
+                            "scaleY": 1.8632045836753912,
+                            "isFilled": true,
+                            "fillColor": "#F10E34",
+                            "width": 390,
+                            "height": 128
+                        }
+                    ]
+                },
+                {
+                    "type": "Triangle",
+                    "id": "f23aeb78-9caa-4183-b038-22c7b4cf5afa",
+                    "label": "triangle",
+                    "scope": "CLASS",
+                    "x": -159,
+                    "y": -3,
+                    "scaleX": 0.20825986285899373,
+                    "scaleY": 0.20825986285899373,
+                    "isFilled": true
+                },
+                {
+                    "type": "Rectangle",
+                    "id": "dfdeb761-ca66-4243-b3ad-83361cebbf61",
+                    "label": "diamond",
+                    "scope": "CLASS",
+                    "x": -159,
+                    "y": -2,
+                    "scaleX": 0.14965033204746947,
+                    "scaleY": 0.14965033204746947,
+                    "angle": 45,
+                    "visible": false,
+                    "isFilled": true,
+                    "width": 128,
+                    "height": 128
+                },
+                {
+                    "type": "Ellipse",
+                    "id": "52e4901f-97b4-4303-ab74-5a8d93a4faa5",
+                    "label": "circle",
+                    "scope": "CLASS",
+                    "x": -159,
+                    "y": -1,
+                    "scaleX": 0.18121060248148646,
+                    "scaleY": 0.18121060248148646,
+                    "visible": false,
+                    "isFilled": true,
+                    "width": 128,
+                    "height": 128
+                },
+                {
+                    "type": "Rectangle",
+                    "id": "bcb741fb-56f9-4e01-b159-753826c232ad",
+                    "label": "square",
+                    "scope": "CLASS",
+                    "x": -159,
+                    "y": -2,
+                    "scaleX": 0.18121060731302335,
+                    "scaleY": 0.18121060731302335,
+                    "visible": false,
+                    "isFilled": true,
+                    "width": 128,
+                    "height": 128
+                },
+                {
+                    "type": "Text",
+                    "id": "6d6a092a-19e2-490f-8f71-841b1de53b42",
+                    "label": "answer_txt",
+                    "scope": "CLASS",
+                    "components": [
+                        "AutoSizeTextComponent"
+                    ],
+                    "AutoSizeTextComponent.maxWidth": 300,
+                    "AutoSizeTextComponent.maxHeight": 200,
+                    "x": -127,
+                    "originY": 0.5,
+                    "text": "By sending",
+                    "lineSpacing": -4,
+                    "fontFamily": "Montserrat",
+                    "fontSize": "70px",
+                    "fontStyle": "bold",
+                    "color": "#FFFFFF",
+                    "stroke": "#c6c6c6ff",
+                    "shadow.offsetY": 4,
+                    "shadow.fill": true,
+                    "shadow.color": "#414040ff",
+                    "shadow.blur": 2,
+                    "wordWrapWidth": 330
+                }
+            ]
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 4
+    },
+    "prefabProperties": [
+        {
+            "name": "btnFillColor",
+            "label": "Property",
+            "tooltip": "",
+            "defValue": "#ffffff",
+            "customDefinition": false,
+            "type": {
+                "id": "color"
+            }
+        },
+        {
+            "name": "answerLetter",
+            "label": "answerLetter",
+            "tooltip": "",
+            "defValue": "",
+            "customDefinition": false,
+            "type": {
+                "id": "string"
+            }
+        }
+    ]
+}
