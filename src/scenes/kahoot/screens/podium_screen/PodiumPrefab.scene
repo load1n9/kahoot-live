@@ -123,30 +123,6 @@
                     "scaleY": 1.3359882178385085
                 },
                 {
-                    "type": "Text",
-                    "id": "09b396b2-fd1c-45aa-8428-b8fbdd09b76a",
-                    "label": "question_txt_2",
-                    "scope": "CLASS",
-                    "components": [
-                        "AutoSizeTextComponent"
-                    ],
-                    "AutoSizeTextComponent.maxWidth": 230,
-                    "AutoSizeTextComponent.maxHeight": 100,
-                    "x": 540,
-                    "y": 571,
-                    "originX": 0.5,
-                    "originY": 0.5,
-                    "text": "Gravix",
-                    "align": "center",
-                    "fontFamily": "Montserrat",
-                    "fontSize": "50px",
-                    "fontStyle": "bold",
-                    "color": "#ffffffff",
-                    "stroke": "#ffffffff",
-                    "shadow.stroke": true,
-                    "wordWrapWidth": 820
-                },
-                {
                     "type": "Rectangle",
                     "id": "c3181b0a-6589-4c65-bbb7-6ca4ae7ba5ee",
                     "label": "rectangle_1",
@@ -158,28 +134,62 @@
                     "height": 128
                 },
                 {
-                    "type": "Text",
-                    "id": "7b7e559c-589a-4d28-93d5-c467d88d89d5",
-                    "label": "question_txt_3",
+                    "type": "Container",
+                    "id": "d159b6d1-327f-4f89-ab13-cc1ddc1ecd61",
+                    "label": "v_names",
                     "scope": "CLASS",
-                    "components": [
-                        "AutoSizeTextComponent"
-                    ],
-                    "AutoSizeTextComponent.maxWidth": 230,
-                    "AutoSizeTextComponent.maxHeight": 100,
-                    "x": 540,
-                    "y": 628,
-                    "originX": 0.5,
-                    "originY": 0.5,
-                    "text": "@calebja",
-                    "align": "center",
-                    "fontFamily": "Montserrat",
-                    "fontSize": "30px",
-                    "fontStyle": "bold",
-                    "color": "#ffffffff",
-                    "stroke": "#ffffffff",
-                    "shadow.stroke": true,
-                    "wordWrapWidth": 820
+                    "x": 541.0754284521582,
+                    "y": 595.7348543996383,
+                    "list": [
+                        {
+                            "type": "Text",
+                            "id": "09b396b2-fd1c-45aa-8428-b8fbdd09b76a",
+                            "label": "display_name_txt",
+                            "scope": "CLASS",
+                            "components": [
+                                "AutoSizeTextComponent"
+                            ],
+                            "AutoSizeTextComponent.maxWidth": 230,
+                            "AutoSizeTextComponent.maxHeight": 100,
+                            "x": -1.075428452158235,
+                            "y": -24.734854399638266,
+                            "originX": 0.5,
+                            "originY": 0.5,
+                            "text": "Gravix",
+                            "align": "center",
+                            "fontFamily": "Montserrat",
+                            "fontSize": "50px",
+                            "fontStyle": "bold",
+                            "color": "#ffffffff",
+                            "stroke": "#ffffffff",
+                            "shadow.stroke": true,
+                            "wordWrapWidth": 820
+                        },
+                        {
+                            "type": "Text",
+                            "id": "7b7e559c-589a-4d28-93d5-c467d88d89d5",
+                            "label": "username_txt",
+                            "scope": "CLASS",
+                            "components": [
+                                "AutoSizeTextComponent"
+                            ],
+                            "AutoSizeTextComponent.maxWidth": 230,
+                            "AutoSizeTextComponent.maxHeight": 100,
+                            "x": -1.075428452158235,
+                            "y": 32.265145600361734,
+                            "originX": 0.5,
+                            "originY": 0.5,
+                            "text": "@calebja",
+                            "align": "center",
+                            "fontFamily": "Montserrat",
+                            "fontSize": "30px",
+                            "fontStyle": "bold",
+                            "color": "#ffffffff",
+                            "stroke": "#ffffffff",
+                            "shadow.stroke": true,
+                            "wordWrapWidth": 820
+                        }
+                    ]
                 }
             ]
         }

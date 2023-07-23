@@ -49,9 +49,22 @@ export default class PodiumScreen extends Phaser.GameObjects.Container {
 		podium3.visible = true;
 		v_anim.add(podium3);
 
+		// spotlight
+		const spotlight = scene.add.image(1893, 270, "kahoot_game@4x", "kahoot_game/spotlight");
+		spotlight.scaleX = 7.69;
+		spotlight.scaleY = 7.69;
+		spotlight.alpha = 0;
+		spotlight.alphaTopLeft = 0;
+		spotlight.alphaTopRight = 0;
+		spotlight.alphaBottomLeft = 0;
+		spotlight.alphaBottomRight = 0;
+		this.add(spotlight);
+
 		this.podium1 = podium1;
 		this.podium2 = podium2;
 		this.podium3 = podium3;
+		this.v_anim = v_anim;
+		this.spotlight = spotlight;
 
 		/* START-USER-CTR-CODE */
 		// Write your code here.
@@ -65,6 +78,10 @@ export default class PodiumScreen extends Phaser.GameObjects.Container {
 	podium2;
 	/** @type {PodiumPrefab} */
 	podium3;
+	/** @type {Phaser.GameObjects.Container} */
+	v_anim;
+	/** @type {Phaser.GameObjects.Image} */
+	spotlight;
 
 	/* START-USER-CODE */
 
@@ -83,11 +100,71 @@ export default class PodiumScreen extends Phaser.GameObjects.Container {
 		this.podium2.setY(1407);
 		this.podium3.setY(1407);
 
-		this.podiumToPraise(this.podium1);
+		this.animCurrentPodium = 3;
+
+		this.podiumToPraise(this.podium3);
+
+		setTimeout(() => {
+			this.podiumToPraise(this.podium2);
+		}, 4000);
+		setTimeout(() => {
+			this.podiumToPraise(this.podium1);
+		}, 10000);
+		setTimeout(() => {
+			this.playSpotlight();
+		}, 12000);
+		setTimeout(() => {
+			confetti({
+				particleCount: 100,
+				spread: 70,
+				origin: { y: 0 },
+			});
+		}, 14000);
+	}
+
+	playSpotlight() {
+		this.spotlight.setAlpha(0);
+		this.spotlight.setPosition(1893, 400);
+
+		const chain = this.scene.tweens.chain({
+			targets: this.spotlight,
+			tweens: [
+				{
+					alpha: { value: 0.5, duration: 500 },
+					ease: 'power3',
+					duration: 750
+				},
+				{
+					x: { value: 460, duration: 1000},
+					ease: 'power3',
+					duration: 750
+				},
+				{
+					x: { value: 460, duration: 1000},
+					ease: 'power3',
+					duration: 1000
+				},
+				{
+					alpha: { value: 0, duration: 300},
+					scale: { value: 10, duration: 200},
+					ease: 'power3',
+					duration: 200
+				},
+				{
+					scale: { value: 7.69, duration: 1},
+					ease: 'power3',
+					duration: 1
+				},
+			]
+		});
 	}
 
 	podiumToPraise(podium) {
 		const praise = {x: -328, y: -616, scale: 1.64}
+
+		podium.display_name_txt.setVisible(false);
+		podium.username_txt.setVisible(false);
+		this.v_anim.bringToTop(podium);
 
 		setTimeout(async () => {
 			const chain = this.scene.tweens.chain({
@@ -104,22 +181,32 @@ export default class PodiumScreen extends Phaser.GameObjects.Container {
 						scale: { value: praise.scale, duration: 2000, ease: 'power2' },
 						onComplete: function() {
 							console.log('GIVE NAME')
+							podium.display_name_txt.setVisible(true);
+							podium.username_txt.setVisible(true);
+							podium.playNameAnimation1();
 						}.bind(this)
 					},
 					{
 						scale: { value: praise.scale, duration: 1000, ease: 'power2' },
-						onComplete: function() {
-
-						}.bind(this)
 					},
 					{
 						scale: { value: podium.finalPos.scale, duration: 550, ease: 'power2' },
 						x: { value: podium.finalPos.x, duration: 550, ease: 'power2' },
-						y: { value: podium.finalPos.y, duration: 550, ease: 'power2' }
+						y: { value: podium.finalPos.y, duration: 550, ease: 'power2' },
 					},
 				]
 			});
 		}, 1000);
+	}
+
+	startConfettiLoop() {
+		this.confettiTimer = setInterval(() => {
+
+		});
+	}
+
+	stopConfettiLoop() {
+		clearInterval(this.confettiTimer);
 	}
 
 	podiumToHumble() {

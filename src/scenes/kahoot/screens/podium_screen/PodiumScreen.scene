@@ -49,6 +49,7 @@
                     "type": "Container",
                     "id": "1d9a49d8-cc96-4a99-b7db-d3a9eff00b82",
                     "label": "v_anim",
+                    "scope": "CLASS",
                     "list": [
                         {
                             "prefabId": "8a22258d-8fc0-4ede-b978-208b77190a1b",
@@ -97,6 +98,25 @@
                             "visible": true
                         }
                     ]
+                },
+                {
+                    "type": "Image",
+                    "id": "21674b78-4513-4b00-9ce9-dad043764dea",
+                    "label": "spotlight",
+                    "scope": "CLASS",
+                    "texture": {
+                        "key": "kahoot_game@4x",
+                        "frame": "kahoot_game/spotlight"
+                    },
+                    "x": 1893,
+                    "y": 270,
+                    "scaleX": 7.69,
+                    "scaleY": 7.69,
+                    "alpha": 0,
+                    "alphaTopLeft": 0,
+                    "alphaTopRight": 0,
+                    "alphaBottomLeft": 0,
+                    "alphaBottomRight": 0
                 }
             ]
         }

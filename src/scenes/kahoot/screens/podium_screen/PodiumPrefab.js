@@ -60,27 +60,31 @@ export default class PodiumPrefab extends Phaser.GameObjects.Container {
 		pfp_placeholder.scaleY = 1.3359882178385085;
 		this.add(pfp_placeholder);
 
-		// question_txt_2
-		const question_txt_2 = scene.add.text(540, 571, "", {});
-		question_txt_2.setOrigin(0.5, 0.5);
-		question_txt_2.text = "Gravix";
-		question_txt_2.setStyle({ "align": "center", "color": "#ffffffff", "fontFamily": "Montserrat", "fontSize": "50px", "fontStyle": "bold", "stroke": "#ffffffff", "shadow.stroke":true});
-		question_txt_2.setWordWrapWidth(820);
-		this.add(question_txt_2);
-
 		// rectangle_1
 		const rectangle_1 = scene.add.rectangle(539, 716, 250, 128);
 		rectangle_1.visible = false;
 		rectangle_1.isFilled = true;
 		this.add(rectangle_1);
 
-		// question_txt_3
-		const question_txt_3 = scene.add.text(540, 628, "", {});
-		question_txt_3.setOrigin(0.5, 0.5);
-		question_txt_3.text = "@calebja";
-		question_txt_3.setStyle({ "align": "center", "color": "#ffffffff", "fontFamily": "Montserrat", "fontSize": "30px", "fontStyle": "bold", "stroke": "#ffffffff", "shadow.stroke":true});
-		question_txt_3.setWordWrapWidth(820);
-		this.add(question_txt_3);
+		// v_names
+		const v_names = scene.add.container(541.0754284521582, 595.7348543996383);
+		this.add(v_names);
+
+		// display_name_txt
+		const display_name_txt = scene.add.text(-1.075428452158235, -24.734854399638266, "", {});
+		display_name_txt.setOrigin(0.5, 0.5);
+		display_name_txt.text = "Gravix";
+		display_name_txt.setStyle({ "align": "center", "color": "#ffffffff", "fontFamily": "Montserrat", "fontSize": "50px", "fontStyle": "bold", "stroke": "#ffffffff", "shadow.stroke":true});
+		display_name_txt.setWordWrapWidth(820);
+		v_names.add(display_name_txt);
+
+		// username_txt
+		const username_txt = scene.add.text(-1.075428452158235, 32.265145600361734, "", {});
+		username_txt.setOrigin(0.5, 0.5);
+		username_txt.text = "@calebja";
+		username_txt.setStyle({ "align": "center", "color": "#ffffffff", "fontFamily": "Montserrat", "fontSize": "30px", "fontStyle": "bold", "stroke": "#ffffffff", "shadow.stroke":true});
+		username_txt.setWordWrapWidth(820);
+		v_names.add(username_txt);
 
 		// rectangle1 (components)
 		const rectangle1RoundedRectangleComponent = new RoundedRectangleComponent(rectangle1);
@@ -96,22 +100,23 @@ export default class PodiumPrefab extends Phaser.GameObjects.Container {
 		question_txt_1AutoSizeTextComponent.maxWidth = 790;
 		question_txt_1AutoSizeTextComponent.maxHeight = 115;
 
-		// question_txt_2 (components)
-		const question_txt_2AutoSizeTextComponent = new AutoSizeTextComponent(question_txt_2);
-		question_txt_2AutoSizeTextComponent.maxWidth = 230;
-		question_txt_2AutoSizeTextComponent.maxHeight = 100;
+		// display_name_txt (components)
+		const display_name_txtAutoSizeTextComponent = new AutoSizeTextComponent(display_name_txt);
+		display_name_txtAutoSizeTextComponent.maxWidth = 230;
+		display_name_txtAutoSizeTextComponent.maxHeight = 100;
 
-		// question_txt_3 (components)
-		const question_txt_3AutoSizeTextComponent = new AutoSizeTextComponent(question_txt_3);
-		question_txt_3AutoSizeTextComponent.maxWidth = 230;
-		question_txt_3AutoSizeTextComponent.maxHeight = 100;
+		// username_txt (components)
+		const username_txtAutoSizeTextComponent = new AutoSizeTextComponent(username_txt);
+		username_txtAutoSizeTextComponent.maxWidth = 230;
+		username_txtAutoSizeTextComponent.maxHeight = 100;
 
 		this.rectangle1 = rectangle1;
 		this.question_txt = question_txt;
 		this.question_txt_1 = question_txt_1;
 		this.pfp_placeholder = pfp_placeholder;
-		this.question_txt_2 = question_txt_2;
-		this.question_txt_3 = question_txt_3;
+		this.display_name_txt = display_name_txt;
+		this.username_txt = username_txt;
+		this.v_names = v_names;
 
 		/* START-USER-CTR-CODE */
 		// Write your code here.
@@ -128,9 +133,11 @@ export default class PodiumPrefab extends Phaser.GameObjects.Container {
 	/** @type {Phaser.GameObjects.Image} */
 	pfp_placeholder;
 	/** @type {Phaser.GameObjects.Text} */
-	question_txt_2;
+	display_name_txt;
 	/** @type {Phaser.GameObjects.Text} */
-	question_txt_3;
+	username_txt;
+	/** @type {Phaser.GameObjects.Container} */
+	v_names;
 
 	/* START-USER-CODE */
 
@@ -146,6 +153,31 @@ export default class PodiumPrefab extends Phaser.GameObjects.Container {
 
 		// slow as fuck
 		//var effect = this.rectangle1.roundedRect.postFX.addGlow(0x000000, 0.6, 0, false, 0.1, 50);
+	}
+
+	playNameAnimation1() {
+		this.v_names.setScale(0.8, 0.8);
+
+		const chain = this.scene.tweens.chain({
+			targets: [this.v_names],
+			tweens: [
+				{
+					scale: { value: 0.8, duration: 1 },
+					ease: 'power3',
+					duration: 1
+				},
+				{
+					scale: { value: 1.05, duration: 400 },
+					ease: Phaser.Math.Easing.Quartic.InOut,
+					duration: 300
+				},
+				{
+					scale: { value: 1, duration: 300 },
+					ease: Phaser.Math.Easing.Quartic.InOut,
+					duration: 300
+				},
+			]
+		});
 	}
 
 	/* END-USER-CODE */

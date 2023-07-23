@@ -4,11 +4,53 @@
 			"image": "kahoot_game@2x-0.png",
 			"format": "RGBA8888",
 			"size": {
-				"w": 1678,
+				"w": 1846,
 				"h": 1004
 			},
 			"scale": 0.5,
 			"frames": [
+				{
+					"filename": "kahoot_game/safe_area",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 540,
+						"h": 960
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 540,
+						"h": 960
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 540,
+						"h": 960
+					}
+				},
+				{
+					"filename": "kahoot_game/checkmark-64",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 32
+					},
+					"frame": {
+						"x": 1,
+						"y": 963,
+						"w": 32,
+						"h": 32
+					}
+				},
 				{
 					"filename": "kahoot_game/study_background",
 					"rotated": false,
@@ -24,7 +66,7 @@
 						"h": 600
 					},
 					"frame": {
-						"x": 1,
+						"x": 543,
 						"y": 1,
 						"w": 900,
 						"h": 600
@@ -45,10 +87,31 @@
 						"h": 400
 					},
 					"frame": {
-						"x": 1,
+						"x": 543,
 						"y": 603,
 						"w": 600,
 						"h": 400
+					}
+				},
+				{
+					"filename": "kahoot_game/spotlight",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 400,
+						"h": 300
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 400,
+						"h": 300
+					},
+					"frame": {
+						"x": 1445,
+						"y": 1,
+						"w": 400,
+						"h": 300
 					}
 				},
 				{
@@ -66,7 +129,7 @@
 						"h": 183
 					},
 					"frame": {
-						"x": 603,
+						"x": 1145,
 						"y": 603,
 						"w": 532,
 						"h": 183
@@ -87,8 +150,8 @@
 						"h": 75
 					},
 					"frame": {
-						"x": 603,
-						"y": 788,
+						"x": 1679,
+						"y": 303,
 						"w": 112,
 						"h": 75
 					}
@@ -108,52 +171,10 @@
 						"h": 50
 					},
 					"frame": {
-						"x": 603,
-						"y": 865,
+						"x": 1793,
+						"y": 303,
 						"w": 50,
 						"h": 50
-					}
-				},
-				{
-					"filename": "kahoot_game/checkmark-64",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 32,
-						"h": 32
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 32,
-						"h": 32
-					},
-					"frame": {
-						"x": 603,
-						"y": 917,
-						"w": 32,
-						"h": 32
-					}
-				},
-				{
-					"filename": "kahoot_game/safe_area",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 540,
-						"h": 960
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 540,
-						"h": 960
-					},
-					"frame": {
-						"x": 1137,
-						"y": 1,
-						"w": 540,
-						"h": 960
 					}
 				}
 			]
@@ -162,6 +183,6 @@
 	"meta": {
 		"app": "https://www.codeandweb.com/texturepacker",
 		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:3046996637658ad61be884f9cf0165c6:7e9f96d5f9663c2bae17f24f3b957237:30dbb4abf859a453014efd793814117a$"
+		"smartupdate": "$TexturePacker:SmartUpdate:67bbfe42a47d4747df63ec46258cf955:c30fe7882c41397cf7856085fca59303:30dbb4abf859a453014efd793814117a$"
 	}
 }

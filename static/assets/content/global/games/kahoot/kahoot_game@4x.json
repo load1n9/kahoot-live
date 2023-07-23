@@ -4,7 +4,7 @@
 			"image": "kahoot_game@4x-0.png",
 			"format": "RGBA8888",
 			"size": {
-				"w": 1802,
+				"w": 2004,
 				"h": 2004
 			},
 			"scale": 1,
@@ -52,6 +52,27 @@
 					}
 				},
 				{
+					"filename": "kahoot_game/spotlight",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 800,
+						"h": 600
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 800,
+						"h": 600
+					},
+					"frame": {
+						"x": 1203,
+						"y": 1203,
+						"w": 800,
+						"h": 600
+					}
+				},
+				{
 					"filename": "kahoot_game/test_content",
 					"rotated": false,
 					"trimmed": false,
@@ -67,7 +88,7 @@
 					},
 					"frame": {
 						"x": 1203,
-						"y": 1203,
+						"y": 1805,
 						"w": 224,
 						"h": 149
 					}
@@ -88,7 +109,7 @@
 					},
 					"frame": {
 						"x": 1429,
-						"y": 1203,
+						"y": 1805,
 						"w": 100,
 						"h": 100
 					}
@@ -108,8 +129,8 @@
 						"h": 64
 					},
 					"frame": {
-						"x": 1429,
-						"y": 1305,
+						"x": 1531,
+						"y": 1805,
 						"w": 64,
 						"h": 64
 					}
@@ -184,6 +205,6 @@
 	"meta": {
 		"app": "https://www.codeandweb.com/texturepacker",
 		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:3046996637658ad61be884f9cf0165c6:7e9f96d5f9663c2bae17f24f3b957237:30dbb4abf859a453014efd793814117a$"
+		"smartupdate": "$TexturePacker:SmartUpdate:67bbfe42a47d4747df63ec46258cf955:c30fe7882c41397cf7856085fca59303:30dbb4abf859a453014efd793814117a$"
 	}
 }
