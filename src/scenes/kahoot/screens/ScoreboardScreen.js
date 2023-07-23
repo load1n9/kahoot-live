@@ -104,6 +104,10 @@ export default class ScoreboardScreen extends Phaser.GameObjects.Container {
 	}
 
 	renderScoreboard() {
+		// Play Music
+		this.scene.kahootGame.stopAllMusic();
+		this.scene.kahootGame.music.kahoot_gong.play();
+
 		const players = this.scene.kahootGame.gameData.players;
 		let i = 0;
 
@@ -141,7 +145,6 @@ export default class ScoreboardScreen extends Phaser.GameObjects.Container {
 	goToNextQuestion() {
 		// Next question!
 		console.log('[ScoreboardScene] Next question!');
-
 		this.scene.kahootGame.showNextQuestion();
 	}
 

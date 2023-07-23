@@ -36,6 +36,7 @@ export default class QuizScreen extends Phaser.GameObjects.Container {
 
 		// title_container
 		const title_container = scene.add.container(559, 51);
+		title_container.visible = false;
 		this.add(title_container);
 
 		// container_2
@@ -213,7 +214,7 @@ export default class QuizScreen extends Phaser.GameObjects.Container {
 		container_233.add(rectangle_1222x);
 
 		// question_big_txt
-		const question_big_txt = scene.add.text(-17, 460, "", {});
+		const question_big_txt = scene.add.text(-17, 465, "", {});
 		question_big_txt.setOrigin(0.5, 0.5);
 		question_big_txt.text = "Loading Content";
 		question_big_txt.setStyle({ "align": "center", "color": "#333333", "fontFamily": "Montserrat", "fontSize": "70px", "fontStyle": "bold", "stroke": "#333333", "strokeThickness":3});
@@ -295,8 +296,8 @@ export default class QuizScreen extends Phaser.GameObjects.Container {
 
 		// question_txt (components)
 		const question_txtAutoSizeTextComponent = new AutoSizeTextComponent(question_txt);
-		question_txtAutoSizeTextComponent.maxWidth = 800;
-		question_txtAutoSizeTextComponent.maxHeight = 200;
+		question_txtAutoSizeTextComponent.maxWidth = 790;
+		question_txtAutoSizeTextComponent.maxHeight = 180;
 
 		// btn2_1 (prefab fields)
 		btn2_1.btnFillColor = "#F10E34";
@@ -334,8 +335,8 @@ export default class QuizScreen extends Phaser.GameObjects.Container {
 
 		// question_big_txt (components)
 		const question_big_txtAutoSizeTextComponent = new AutoSizeTextComponent(question_big_txt);
-		question_big_txtAutoSizeTextComponent.maxWidth = 800;
-		question_big_txtAutoSizeTextComponent.maxHeight = 300;
+		question_big_txtAutoSizeTextComponent.maxWidth = 790;
+		question_big_txtAutoSizeTextComponent.maxHeight = 290;
 
 		// rectangle_1222xa (components)
 		const rectangle_1222xaRoundedRectangleComponent = new RoundedRectangleComponent(rectangle_1222xa);
@@ -481,6 +482,11 @@ export default class QuizScreen extends Phaser.GameObjects.Container {
 		this.questionJSON = questionJSON;
 		this.quizType = quizType;
 
+		// Play Music
+		// todo: 20s, 30s, 60s
+		this.kahootGame.stopAllMusic();
+		this.kahootGame.music.kahoot_quiz_30.play();
+
 		console.log('renderScreen() text:', questionJSON.title)
 		// use questionJSON.title for content type questions
 		this.question_txt.setText(questionJSON.question);
@@ -527,11 +533,6 @@ export default class QuizScreen extends Phaser.GameObjects.Container {
 		this.v_question_active.setVisible(true);
 		this.v_percentages.setVisible(false);
 		this.startTimer(questionJSON.time);
-
-		// Play Music
-		// todo: 20s, 30s, 60s
-		this.kahootGame.stopAllMusic();
-		this.kahootGame.music.kahoot_quiz_30.play();
 	}
 
 	startTimer(timeMS) {

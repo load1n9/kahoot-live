@@ -71,7 +71,8 @@ export default class QuestionScreen extends Phaser.GameObjects.Container {
 
 		// question_txt (components)
 		const question_txtAutoSizeTextComponent = new AutoSizeTextComponent(question_txt);
-		question_txtAutoSizeTextComponent.maxWidth = 820;
+		question_txtAutoSizeTextComponent.maxWidth = 790;
+		question_txtAutoSizeTextComponent.maxHeight = 115;
 
 		// load_rect (components)
 		const load_rectRoundedRectangleComponent = new RoundedRectangleComponent(load_rect);
@@ -99,6 +100,9 @@ export default class QuestionScreen extends Phaser.GameObjects.Container {
 
 	renderScreen(kahootGame, questionJSON, questionType) {
 		this.kahootGame = kahootGame;
+
+		// Play Music
+		this.kahootGame.stopAllMusic();
 
 		// use questionJSON.title for content type questions
 		this.question_txt.setText(questionJSON.question);

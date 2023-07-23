@@ -51,18 +51,7 @@ export default class JoinedPlayer extends Phaser.GameObjects.Container {
 
 		/* START-USER-CTR-CODE */
 		// Write your code here.
-		this.pfpImage = scene.add.rexCircleMaskImage(this.pfp_placeholder.x, this.pfp_placeholder.y, "kahoot_game@4x", "kahoot_game/test_pfp.jpeg", {
-			maskType: 0,
-			//radius: 12,
-
-			// backgroundColor: undefined,
-
-			// strokeColor: undefined,
-			// strokeWidth: 0,
-		});
-		this.pfpImage.setScale(this.pfp_placeholder.scaleX, this.pfp_placeholder.scaleY);
-		this.pfp_placeholder.setVisible(false);
-		this.v_center.add(this.pfpImage);
+		this._init();
 		/* END-USER-CTR-CODE */
 	}
 
@@ -78,6 +67,15 @@ export default class JoinedPlayer extends Phaser.GameObjects.Container {
 	/* START-USER-CODE */
 
 	// Write your code here.
+
+	_init() {
+		this.pfpImage = this.scene.add.rexCircleMaskImage(this.pfp_placeholder.x, this.pfp_placeholder.y, "kahoot_game@4x", "kahoot_game/test_pfp.jpeg", {
+			maskType: 0,
+		});
+		this.pfpImage.setScale(this.pfp_placeholder.scaleX, this.pfp_placeholder.scaleY);
+		this.pfp_placeholder.setVisible(false);
+		this.v_center.add(this.pfpImage);
+	}
 
 	/**
 	 * Main function to render the joined player.

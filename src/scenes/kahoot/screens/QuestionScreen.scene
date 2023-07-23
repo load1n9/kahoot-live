@@ -81,7 +81,8 @@
                             "components": [
                                 "AutoSizeTextComponent"
                             ],
-                            "AutoSizeTextComponent.maxWidth": 820,
+                            "AutoSizeTextComponent.maxWidth": 790,
+                            "AutoSizeTextComponent.maxHeight": 115,
                             "x": -17,
                             "y": 612,
                             "originX": 0.5,

@@ -1,0 +1,111 @@
+{
+    "id": "6c257589-e384-4c77-a97c-299cdb0f673c",
+    "sceneType": "PREFAB",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "preloadMethodName": "",
+        "preloadPackFiles": [],
+        "createMethodName": "",
+        "borderWidth": 1080,
+        "borderHeight": 1920
+    },
+    "displayList": [
+        {
+            "type": "Container",
+            "id": "9ee30828-459c-4ffc-a450-6faafa36fdf9",
+            "label": "container_1",
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "a1d50280-83b0-426a-a35a-11a21ff622b8",
+                    "label": "kahoot_game_background_desert",
+                    "texture": {
+                        "key": "kahoot_game@4x",
+                        "frame": "kahoot_game/background_desert"
+                    },
+                    "x": 543,
+                    "y": 975,
+                    "scaleX": 2.072206123909567,
+                    "scaleY": 2.4925556412304135,
+                    "tintTopLeft": "#da90ee",
+                    "tintTopRight": "#b36ff0",
+                    "tintBottomLeft": "#332525",
+                    "tintBottomRight": "#3f0a63"
+                },
+                {
+                    "type": "Image",
+                    "id": "5f2ba684-e9c2-4781-8026-441119f07c8f",
+                    "label": "kahoot_game_safe_area",
+                    "texture": {
+                        "key": "kahoot_game@4x",
+                        "frame": "kahoot_game/safe_area"
+                    },
+                    "x": 540,
+                    "y": 960,
+                    "visible": false
+                },
+                {
+                    "type": "Container",
+                    "id": "1d9a49d8-cc96-4a99-b7db-d3a9eff00b82",
+                    "label": "v_anim",
+                    "list": [
+                        {
+                            "prefabId": "8a22258d-8fc0-4ede-b978-208b77190a1b",
+                            "id": "d14bf69b-c486-4457-bd8c-6961e5f85fb5",
+                            "unlock": [
+                                "x",
+                                "y",
+                                "visible",
+                                "scaleX",
+                                "scaleY"
+                            ],
+                            "label": "podium1",
+                            "scope": "CLASS",
+                            "x": 0,
+                            "y": 0,
+                            "scaleX": 1,
+                            "scaleY": 1,
+                            "visible": true
+                        },
+                        {
+                            "prefabId": "8a22258d-8fc0-4ede-b978-208b77190a1b",
+                            "id": "82d0cd99-b0d4-469e-ab62-efdec3e07af2",
+                            "unlock": [
+                                "x",
+                                "y",
+                                "visible"
+                            ],
+                            "label": "podium2",
+                            "scope": "CLASS",
+                            "x": -276,
+                            "y": 109,
+                            "visible": true
+                        },
+                        {
+                            "prefabId": "8a22258d-8fc0-4ede-b978-208b77190a1b",
+                            "id": "c6529b66-dd28-4615-945e-d8fdba0f1155",
+                            "unlock": [
+                                "x",
+                                "y",
+                                "visible"
+                            ],
+                            "label": "podium3",
+                            "scope": "CLASS",
+                            "x": 280,
+                            "y": 200,
+                            "visible": true
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 4
+    }
+}

@@ -1,0 +1,194 @@
+{
+    "id": "8a22258d-8fc0-4ede-b978-208b77190a1b",
+    "sceneType": "PREFAB",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "preloadMethodName": "",
+        "preloadPackFiles": [],
+        "createMethodName": "",
+        "borderWidth": 1080,
+        "borderHeight": 1920
+    },
+    "displayList": [
+        {
+            "type": "Container",
+            "id": "319a60e3-7ef4-40da-84c4-f0550651e440",
+            "label": "container_1",
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "4c9b38f2-0cf0-4b37-8102-f6c4240d4d93",
+                    "label": "kahoot_game_background_desert",
+                    "texture": {
+                        "key": "kahoot_game@4x",
+                        "frame": "kahoot_game/background_desert"
+                    },
+                    "x": 567,
+                    "y": 962,
+                    "scaleX": 2.072206123909567,
+                    "scaleY": 2.4925556412304135,
+                    "visible": false,
+                    "tintTopLeft": "#da90ee",
+                    "tintTopRight": "#b36ff0",
+                    "tintBottomLeft": "#332525",
+                    "tintBottomRight": "#3f0a63"
+                },
+                {
+                    "type": "Container",
+                    "id": "b9acbe3f-5800-4a70-b3c8-474e3786ea9c",
+                    "label": "container_2",
+                    "x": 493,
+                    "y": 1486,
+                    "list": [
+                        {
+                            "type": "Rectangle",
+                            "id": "237ff930-0a4c-492e-9aac-3a69462dda96",
+                            "label": "rectangle1",
+                            "scope": "CLASS",
+                            "components": [
+                                "RoundedRectangleComponent"
+                            ],
+                            "RoundedRectangleComponent.radius": 20,
+                            "x": 44,
+                            "y": 689,
+                            "scaleX": 0.35658812935429957,
+                            "scaleY": 11.580091929876478,
+                            "originY": 1,
+                            "isFilled": true,
+                            "fillColor": "#8858C3",
+                            "width": 820,
+                            "height": 128
+                        }
+                    ]
+                },
+                {
+                    "type": "Text",
+                    "id": "0627ec9e-b61d-43c7-b661-768b27388735",
+                    "label": "question_txt",
+                    "scope": "CLASS",
+                    "components": [
+                        "AutoSizeTextComponent"
+                    ],
+                    "AutoSizeTextComponent.maxWidth": 790,
+                    "AutoSizeTextComponent.maxHeight": 115,
+                    "x": 540,
+                    "y": 982,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "13429",
+                    "align": "center",
+                    "fontFamily": "Montserrat",
+                    "fontSize": "50px",
+                    "fontStyle": "bold",
+                    "color": "#ffffffff",
+                    "stroke": "#ffffffff",
+                    "wordWrapWidth": 820
+                },
+                {
+                    "type": "Text",
+                    "id": "fc79aea5-4a4a-4df8-844c-8c018497e3b2",
+                    "label": "question_txt_1",
+                    "scope": "CLASS",
+                    "components": [
+                        "AutoSizeTextComponent"
+                    ],
+                    "AutoSizeTextComponent.maxWidth": 790,
+                    "AutoSizeTextComponent.maxHeight": 115,
+                    "x": 540,
+                    "y": 1042,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "13 out of 25",
+                    "align": "center",
+                    "fontFamily": "Montserrat",
+                    "fontSize": "40px",
+                    "fontStyle": "bold",
+                    "color": "#ffffffff",
+                    "stroke": "#ffffffff",
+                    "wordWrapWidth": 820
+                },
+                {
+                    "type": "Image",
+                    "id": "9263d5c4-bf66-41f0-b8df-9ff9fa6ff887",
+                    "label": "pfp_placeholder",
+                    "scope": "CLASS",
+                    "texture": {
+                        "key": "kahoot_game@4x",
+                        "frame": "kahoot_game/test_pfp.jpeg"
+                    },
+                    "x": 540,
+                    "y": 837,
+                    "scaleX": 1.3359882178385085,
+                    "scaleY": 1.3359882178385085
+                },
+                {
+                    "type": "Text",
+                    "id": "09b396b2-fd1c-45aa-8428-b8fbdd09b76a",
+                    "label": "question_txt_2",
+                    "scope": "CLASS",
+                    "components": [
+                        "AutoSizeTextComponent"
+                    ],
+                    "AutoSizeTextComponent.maxWidth": 230,
+                    "AutoSizeTextComponent.maxHeight": 100,
+                    "x": 540,
+                    "y": 571,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "Gravix",
+                    "align": "center",
+                    "fontFamily": "Montserrat",
+                    "fontSize": "50px",
+                    "fontStyle": "bold",
+                    "color": "#ffffffff",
+                    "stroke": "#ffffffff",
+                    "shadow.stroke": true,
+                    "wordWrapWidth": 820
+                },
+                {
+                    "type": "Rectangle",
+                    "id": "c3181b0a-6589-4c65-bbb7-6ca4ae7ba5ee",
+                    "label": "rectangle_1",
+                    "x": 539,
+                    "y": 716,
+                    "visible": false,
+                    "isFilled": true,
+                    "width": 250,
+                    "height": 128
+                },
+                {
+                    "type": "Text",
+                    "id": "7b7e559c-589a-4d28-93d5-c467d88d89d5",
+                    "label": "question_txt_3",
+                    "scope": "CLASS",
+                    "components": [
+                        "AutoSizeTextComponent"
+                    ],
+                    "AutoSizeTextComponent.maxWidth": 230,
+                    "AutoSizeTextComponent.maxHeight": 100,
+                    "x": 540,
+                    "y": 628,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "@calebja",
+                    "align": "center",
+                    "fontFamily": "Montserrat",
+                    "fontSize": "30px",
+                    "fontStyle": "bold",
+                    "color": "#ffffffff",
+                    "stroke": "#ffffffff",
+                    "shadow.stroke": true,
+                    "wordWrapWidth": 820
+                }
+            ]
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 4
+    }
+}

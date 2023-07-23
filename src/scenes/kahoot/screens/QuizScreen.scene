@@ -62,6 +62,7 @@
                     "scope": "CLASS",
                     "x": 559,
                     "y": 51,
+                    "visible": false,
                     "list": [
                         {
                             "type": "Container",
@@ -95,8 +96,8 @@
                             "components": [
                                 "AutoSizeTextComponent"
                             ],
-                            "AutoSizeTextComponent.maxWidth": 800,
-                            "AutoSizeTextComponent.maxHeight": 200,
+                            "AutoSizeTextComponent.maxWidth": 790,
+                            "AutoSizeTextComponent.maxHeight": 180,
                             "x": -17,
                             "y": 415,
                             "originX": 0.5,
@@ -499,10 +500,10 @@
                             "components": [
                                 "AutoSizeTextComponent"
                             ],
-                            "AutoSizeTextComponent.maxWidth": 800,
-                            "AutoSizeTextComponent.maxHeight": 300,
+                            "AutoSizeTextComponent.maxWidth": 790,
+                            "AutoSizeTextComponent.maxHeight": 290,
                             "x": -17,
-                            "y": 460,
+                            "y": 465,
                             "originX": 0.5,
                             "originY": 0.5,
                             "text": "Loading Content",

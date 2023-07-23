@@ -9,7 +9,7 @@ import QuestionScreen from "./screens/QuestionScreen";
 import ContentScreen from "./screens/ContentScreen";
 import QuizScreen from "./screens/QuizScreen";
 import ScoreboardScreen from "./screens/ScoreboardScreen";
-import PodiumScreen from "./screens/PodiumScreen/PodiumScreen";
+import PodiumScreen from "./screens/podium_screen/PodiumScreen";
 /* START-USER-IMPORTS */
 /* END-USER-IMPORTS */
 
@@ -92,7 +92,7 @@ export default class KahootGame extends Phaser.GameObjects.Container {
 
 		this.gameData;
 		this.music = {
-			podium: this.scene.sound.add('kahoot_podium', {loop:true}),
+			kahoot_podium: this.scene.sound.add('kahoot_podium', {loop:true}),
 			kahoot_gong: this.scene.sound.add('kahoot_gong', {loop:false}),
 			kahoot_lobby: this.scene.sound.add('kahoot_lobby', {loop:true}),
 			kahoot_quiz_20: this.scene.sound.add('kahoot_quiz_20', {loop:false}),
@@ -105,7 +105,7 @@ export default class KahootGame extends Phaser.GameObjects.Container {
 
 	stopAllMusic() {
 		this.music.kahoot_lobby.stop();
-		this.music.podium.stop();
+		this.music.kahoot_podium.stop();
 		this.music.kahoot_quiz_20.stop();
 		this.music.kahoot_quiz_30.stop();
 	}
@@ -161,10 +161,12 @@ export default class KahootGame extends Phaser.GameObjects.Container {
 
 	showPodium() {
 		this.hideScreens();
+		this.podiumScreen.renderPodium();
 		this.podiumScreen.setVisible(true);
 	}
 
 	showCurrentQuestion() {
+		return this.showPodium()
 		const question = this.getCurrentQuestion();
 
 		console.log(question);
