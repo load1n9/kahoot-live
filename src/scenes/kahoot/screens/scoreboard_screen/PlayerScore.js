@@ -85,8 +85,9 @@ export default class PlayerScore extends Phaser.GameObjects.Container {
 
 	// Write your code here.
 
-	renderScore() {
-
+	renderScore(displayName, points, pfpURL) {
+		this.name_txt.setText(displayName);
+		this.points_txt.setText(points);
 	}
 
 	/* END-USER-CODE */

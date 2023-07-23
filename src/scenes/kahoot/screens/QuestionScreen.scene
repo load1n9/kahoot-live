@@ -82,7 +82,6 @@
                                 "AutoSizeTextComponent"
                             ],
                             "AutoSizeTextComponent.maxWidth": 820,
-                            "AutoSizeTextComponent.minTextSize": 16,
                             "x": -17,
                             "y": 612,
                             "originX": 0.5,

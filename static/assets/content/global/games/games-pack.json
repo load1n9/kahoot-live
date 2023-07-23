@@ -6,6 +6,48 @@
                 "url": "assets/content/global/games/kahoot/kahoot_game@4x.json",
                 "path": "assets/content/global/games/kahoot",
                 "key": "kahoot_game@4x"
+            },
+            {
+                "url": [
+                    "assets/content/global/games/kahoot/audio/kahoot_gong.mp3"
+                ],
+                "type": "audio",
+                "key": "kahoot_gong"
+            },
+            {
+                "url": [
+                    "assets/content/global/games/kahoot/audio/kahoot_lobby.mp3"
+                ],
+                "type": "audio",
+                "key": "kahoot_lobby"
+            },
+            {
+                "url": [
+                    "assets/content/global/games/kahoot/audio/kahoot_podium.mp3"
+                ],
+                "type": "audio",
+                "key": "kahoot_podium"
+            },
+            {
+                "url": [
+                    "assets/content/global/games/kahoot/audio/kahoot_quiz_20.mp3"
+                ],
+                "type": "audio",
+                "key": "kahoot_quiz_20"
+            },
+            {
+                "url": [
+                    "assets/content/global/games/kahoot/audio/kahoot_quiz_30.mp3"
+                ],
+                "type": "audio",
+                "key": "kahoot_quiz_30"
+            },
+            {
+                "url": [
+                    "assets/content/global/games/kahoot/audio/trailer_rise_hit.mp3"
+                ],
+                "type": "audio",
+                "key": "trailer_rise_hit"
             }
         ]
     },

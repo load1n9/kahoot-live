@@ -86,15 +86,16 @@ export default class JoinedPlayer extends Phaser.GameObjects.Container {
 	 */
 	renderPlayer(player, profilePic) {
 		this.name_txt.setText(name);
-		console.log('sceneee', this.scene.kahootGame);
 
-		if (this.scene.kahootGame.loadedProfilePictures.includes())
+		if (this.scene.kahootGame.loadedProfilePictures.includes()) {
+
+		}
 
 		// Load the image
 		this.scene.load.image('dynamicImage', 'https://p16-sign.tiktokcdn-us.com/tos-useast5-avt-0068-tx/7f144a3653feea59c03465cd69da0bf0~c5_100x100.webp?x-expires=1690164000&x-signature=lLqsiOP3Bl%2FUQTZn%2FzWt%2BBE1I0I%3D');
 		this.scene.load.start();
 		this.scene.load.once('complete', function () {
-			const dynamicImage = this.scene.add.image(400, 300, 'dynamicImage');
+			//const dynamicImage = this.scene.add.image(400, 300, 'dynamicImage');
 		}, this);
 
 		this.centerContainerAtZero(this.v_center);

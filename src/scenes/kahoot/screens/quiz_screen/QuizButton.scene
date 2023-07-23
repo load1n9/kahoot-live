@@ -125,6 +125,17 @@
                     "shadow.color": "#414040ff",
                     "shadow.blur": 2,
                     "wordWrapWidth": 330
+                },
+                {
+                    "type": "Image",
+                    "id": "ce617213-9aec-444c-9adb-bb95b8ab5e03",
+                    "label": "answer_img",
+                    "scope": "CLASS",
+                    "texture": {
+                        "key": "kahoot_game@4x",
+                        "frame": "kahoot_game/test_content"
+                    },
+                    "x": 23
                 }
             ]
         }

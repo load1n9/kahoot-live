@@ -9,6 +9,7 @@ import QuestionScreen from "./screens/QuestionScreen";
 import ContentScreen from "./screens/ContentScreen";
 import QuizScreen from "./screens/QuizScreen";
 import ScoreboardScreen from "./screens/ScoreboardScreen";
+import PodiumScreen from "./screens/PodiumScreen/PodiumScreen";
 /* START-USER-IMPORTS */
 /* END-USER-IMPORTS */
 
@@ -35,22 +36,30 @@ export default class KahootGame extends Phaser.GameObjects.Container {
 
 		// contentScreen
 		const contentScreen = new ContentScreen(scene, 0, 0);
+		contentScreen.visible = false;
 		this.add(contentScreen);
 
 		// quizScreen
 		const quizScreen = new QuizScreen(scene, 0, 0);
-		quizScreen.visible = true;
+		quizScreen.visible = false;
 		this.add(quizScreen);
 
 		// scoreboardScreen
 		const scoreboardScreen = new ScoreboardScreen(scene, 0, 0);
+		scoreboardScreen.visible = false;
 		this.add(scoreboardScreen);
+
+		// podiumScreen
+		const podiumScreen = new PodiumScreen(scene, 0, 0);
+		podiumScreen.visible = false;
+		this.add(podiumScreen);
 
 		this.game_background = game_background;
 		this.questionScreen = questionScreen;
 		this.contentScreen = contentScreen;
 		this.quizScreen = quizScreen;
 		this.scoreboardScreen = scoreboardScreen;
+		this.podiumScreen = podiumScreen;
 
 		/* START-USER-CTR-CODE */
 		// Write your code here.
@@ -68,6 +77,8 @@ export default class KahootGame extends Phaser.GameObjects.Container {
 	quizScreen;
 	/** @type {ScoreboardScreen} */
 	scoreboardScreen;
+	/** @type {PodiumScreen} */
+	podiumScreen;
 
 	/* START-USER-CODE */
 
@@ -80,8 +91,23 @@ export default class KahootGame extends Phaser.GameObjects.Container {
 		this.kahootNetwork.connect();
 
 		this.gameData;
+		this.music = {
+			podium: this.scene.sound.add('kahoot_podium', {loop:true}),
+			kahoot_gong: this.scene.sound.add('kahoot_gong', {loop:false}),
+			kahoot_lobby: this.scene.sound.add('kahoot_lobby', {loop:true}),
+			kahoot_quiz_20: this.scene.sound.add('kahoot_quiz_20', {loop:false}),
+			kahoot_quiz_30: this.scene.sound.add('kahoot_quiz_30', {loop:false}),
+		}
 
 		this.resetGame();
+		this.music.kahoot_lobby.play();
+	}
+
+	stopAllMusic() {
+		this.music.kahoot_lobby.stop();
+		this.music.podium.stop();
+		this.music.kahoot_quiz_20.stop();
+		this.music.kahoot_quiz_30.stop();
 	}
 
 	resetGame() {
@@ -90,6 +116,7 @@ export default class KahootGame extends Phaser.GameObjects.Container {
 			currentQuestionId: 0,
 			currentAnswerCount: 0,
 			currentAnswers: {a: 0, b: 0, c: 0, d: 0},
+			currentOpenEndedAnswers: [],
 			players: {}
 		}
 	}
@@ -98,25 +125,43 @@ export default class KahootGame extends Phaser.GameObjects.Container {
 		return this.quizJSON.kahoot.questions[this.gameData.currentQuestionId]
 	}
 
+	isFinalQuestion() {
+		const maxQuestions = this.quizJSON.kahoot.questions.length;
+
+		return (this.gameData.currentQuestionId + 1) >= maxQuestions;
+	}
+
 	startNewGame(quizJSON) {
 		this.resetGame();
 
 		this.quizJSON = quizJSON;
 
 		this.showCurrentQuestion();
-		this.scoreboardScreen.renderScoreboard();
 	}
 
 	hideScreens() {
 		this.quizScreen.setVisible(false);
 		this.contentScreen.setVisible(false);
 		this.questionScreen.setVisible(false);
+		this.scoreboardScreen.setVisible(false);
+		this.podiumScreen.setVisible(false);
 	}
 
 	showNextQuestion() {
+		if (this.scene.kahootGame.isFinalQuestion()) {
+			console.log('[KahootGame] Actually, it is the last question. Podium!');
+			this.showPodium();
+			return;
+		}
+
 		this.gameData.currentQuestionId++;
 		console.log('Showing next question.', this.gameData.currentQuestionId);
 		this.showCurrentQuestion();
+	}
+
+	showPodium() {
+		this.hideScreens();
+		this.podiumScreen.setVisible(true);
 	}
 
 	showCurrentQuestion() {
@@ -124,6 +169,7 @@ export default class KahootGame extends Phaser.GameObjects.Container {
 
 		console.log(question);
 
+		this.gameData.currentAnswers = {a: 0, b: 0, c: 0, d: 0};
 		this.gameData.currentAnswerCount = 0;
 		this.hideScreens();
 
@@ -135,8 +181,38 @@ export default class KahootGame extends Phaser.GameObjects.Container {
 			}
 			case 'quiz': {
 				this.questionScreen.setVisible(true);
-				this.questionScreen.renderScreen(this, this.getCurrentQuestion());
+				this.questionScreen.renderScreen(this, this.getCurrentQuestion(), question.type);
 				break;
+			}
+			case 'open_ended': {
+				this.questionScreen.setVisible(true);
+				this.questionScreen.renderScreen(this, this.getCurrentQuestion(), question.type);
+				break;
+			}
+			default: {
+				// unsupported question type
+				console.error('[KahootGame] Removing unsupported question type:', question.type);
+				this.removeUnsupportedQuestionType(question.type);
+			}
+		}
+	}
+
+	/**
+	 * We are removing unsupported question types as we go.
+	 * At the end, any question types that are unsupported will be gone from the working JSON.
+	 * This looks like something that would break something two months from now.
+	 * @param type
+	 */
+	removeUnsupportedQuestionType(type) {
+		const questions = this.quizJSON.kahoot.questions;
+
+		for (let i = 0; i < questions.length; i++) {
+			const question = questions[i];
+
+			if (question.type === type) {
+				// Remove question from the array
+				questions.splice(i, 1);
+				i--;
 			}
 		}
 	}
@@ -176,10 +252,13 @@ export default class KahootGame extends Phaser.GameObjects.Container {
 			this.quizScreen.answers_txt["__AutoSizeTextComponent"].refreshCalculations();
 		}
 
+		let isCorrect = false;
+
 		// Calculate Player Score
 		const player = this.gameData.players[username];
 		const currentQuestion = this.getCurrentQuestion();
 		const choices = currentQuestion.choices;
+		// Get Choice JSON
 		const choiceIndex = letters.indexOf(answer);
 		const choice = choices[choiceIndex];
 
@@ -187,8 +266,21 @@ export default class KahootGame extends Phaser.GameObjects.Container {
 		 * todo: Single-select questions offer up to 1000 points when a player responds correctly.
 		 * Multi-select questions offer up to 500 points per correct answer.
 		 */
+		switch (currentQuestion.type) {
+			case 'open_ended': {
+				for (let i = 0; i < choices.length; i++) {
+					if (choices[i].answer.toLowerCase() === answer) {
+						isCorrect = true; 
+					}
+				}
+				break;
+			}
+			default: {
+				isCorrect = choice.correct;
+			}
+		}
 
-		if (choice.correct) {
+		if (isCorrect) {
 			player.streak++;
 
 			const timerTime = this.quizScreen.timerTime / 1000;
@@ -197,9 +289,9 @@ export default class KahootGame extends Phaser.GameObjects.Container {
 			// Kahoot Score Calculation
 			// https://support.kahoot.com/hc/en-us/articles/115002303908-How-points-work
 			const POINTS_POSSIBLE = 1000;
-			let points = (1 - ((responseTime / timerTime) / 2)) * POINTS_POSSIBLE;
+			let points = Math.max(0, (1 - ((responseTime / timerTime) / 2)) * POINTS_POSSIBLE);
 
-			points += this.calculatePointsForStreak(player.streak);
+			//points += this.calculatePointsForStreak(player.streak);
 			player.score += points;
 		} else {
 			player.streak = 0;

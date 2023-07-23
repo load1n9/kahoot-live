@@ -72,7 +72,6 @@ export default class QuestionScreen extends Phaser.GameObjects.Container {
 		// question_txt (components)
 		const question_txtAutoSizeTextComponent = new AutoSizeTextComponent(question_txt);
 		question_txtAutoSizeTextComponent.maxWidth = 820;
-		question_txtAutoSizeTextComponent.minTextSize = 16;
 
 		// load_rect (components)
 		const load_rectRoundedRectangleComponent = new RoundedRectangleComponent(load_rect);
@@ -98,12 +97,12 @@ export default class QuestionScreen extends Phaser.GameObjects.Container {
 
 	// Write your code here.
 
-	renderScreen(kahootGame, questionJSON) {
+	renderScreen(kahootGame, questionJSON, questionType) {
 		this.kahootGame = kahootGame;
 
-		console.log('renderScreen() text:', questionJSON.title)
 		// use questionJSON.title for content type questions
 		this.question_txt.setText(questionJSON.question);
+		this.question_txt["__AutoSizeTextComponent"].refreshCalculations();
 
 		this.scene.tweens.add({
 			targets: this.load_rect.roundedRect,
@@ -116,7 +115,7 @@ export default class QuestionScreen extends Phaser.GameObjects.Container {
 				// Show the actual quiz question now
 				this.kahootGame.hideScreens();
 				this.kahootGame.quizScreen.setVisible(true);
-				this.kahootGame.quizScreen.renderScreen(this.kahootGame, this.kahootGame.getCurrentQuestion());
+				this.kahootGame.quizScreen.renderScreen(this.kahootGame, this.kahootGame.getCurrentQuestion(), questionType);
 			}.bind(this)
 		});
 	}

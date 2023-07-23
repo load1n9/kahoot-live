@@ -72,6 +72,10 @@ export default class QuizButton extends Phaser.GameObjects.Container {
 		answer_txt.setWordWrapWidth(330);
 		this.add(answer_txt);
 
+		// answer_img
+		const answer_img = scene.add.image(23, 0, "kahoot_game@4x", "kahoot_game/test_content");
+		this.add(answer_img);
+
 		// rectangle (components)
 		const rectangleRoundedRectangleComponent = new RoundedRectangleComponent(rectangle);
 		rectangleRoundedRectangleComponent.radius = 20;
@@ -87,6 +91,7 @@ export default class QuizButton extends Phaser.GameObjects.Container {
 		this.circle = circle;
 		this.square = square;
 		this.answer_txt = answer_txt;
+		this.answer_img = answer_img;
 
 		/* START-USER-CTR-CODE */
 		// Write your code here.
@@ -105,6 +110,8 @@ export default class QuizButton extends Phaser.GameObjects.Container {
 	square;
 	/** @type {Phaser.GameObjects.Text} */
 	answer_txt;
+	/** @type {Phaser.GameObjects.Image} */
+	answer_img;
 	/** @type {string} */
 	btnFillColor = "#ffffff";
 	/** @type {string} */
@@ -140,8 +147,25 @@ export default class QuizButton extends Phaser.GameObjects.Container {
 				break;
 		}
 
-		this.answer_txt.setText(choiceJSON.answer);
-		this.answer_txt["__AutoSizeTextComponent"].refreshCalculations();
+		this.answer_txt.setVisible(choiceJSON.answer);
+		this.answer_img.setVisible(choiceJSON.image);
+
+		if (choiceJSON.answer) {
+			this.answer_txt.setText(choiceJSON.answer);
+			this.answer_txt["__AutoSizeTextComponent"].refreshCalculations();
+			return;
+		}
+		if (choiceJSON.image) {
+			// Load the image
+			const dynamicId = `quiz-button-img-${choiceJSON.image.id}`;
+
+			this.scene.load.image(dynamicId, `https://images-cdn.kahoot.it/${choiceJSON.image.id}?auto=webp&quality=10`);
+			this.scene.load.start();
+			this.scene.load.once('complete', function () {
+				this.answer_img.setTexture(dynamicId);
+				this.answer_img.setDisplaySize(300, 200);
+			}, this);
+		}
 	}
 
 	/* END-USER-CODE */

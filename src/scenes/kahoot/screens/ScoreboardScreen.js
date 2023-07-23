@@ -104,38 +104,7 @@ export default class ScoreboardScreen extends Phaser.GameObjects.Container {
 	}
 
 	renderScoreboard() {
-		const players = {
-			"its_gravix": {streak: 0, score: 0, displayName: "Gravix"},
-			"playjos": {streak: 0, score: 0, displayName: "PlayJos TV"},
-			"playjos2": {streak: 0, score: 0, displayName: "PlayJos TV2"},
-			"playjos23": {streak: 0, score: 0, displayName: "PlayJos TV3"},
-			"playjos234": {streak: 0, score: 0, displayName: "PlayJos TV3"},
-			"playjos235": {streak: 0, score: 0, displayName: "PlayJos TV3"},
-			"playjos236": {streak: 0, score: 0, displayName: "PlayJos TV3"},
-			"playjos232": {streak: 0, score: 0, displayName: "PlayJos TV3"},
-			"playjos2312": {streak: 0, score: 0, displayName: "PlayJos TV3"},
-			"playjos231": {streak: 0, score: 0, displayName: "PlayJos TV3"},
-			"playjosx2": {streak: 0, score: 0, displayName: "PlayJos TV2"},
-			"playjosg23": {streak: 0, score: 0, displayName: "PlayJos TV3"},
-			"playjnos234": {streak: 0, score: 0, displayName: "PlayJos TV3"},
-			"playjodss235": {streak: 0, score: 0, displayName: "PlayJos TV3"},
-			"playjvbos236": {streak: 0, score: 0, displayName: "PlayJos TV3"},
-			"playjoss232": {streak: 0, score: 0, displayName: "PlayJos TV3"},
-			"playjosx2312": {streak: 0, score: 0, displayName: "PlayJos TV3"},
-			"playjcxos231": {streak: 0, score: 0, displayName: "PlayJos TV3"},
-			"playajos232": {streak: 0, score: 0, displayName: "PlayJos TV3"},
-			"playcjos2312": {streak: 0, score: 0, displayName: "PlayJos TV3"},
-			"playjoxs231": {streak: 0, score: 0, displayName: "PlayJos TV3"},
-			"playjovsx2": {streak: 0, score: 0, displayName: "PlayJos TV2"},
-			"playjnbosg23": {streak: 0, score: 0, displayName: "PlayJos TV3"},
-			"playjnyos234": {streak: 0, score: 0, displayName: "PlayJos TV3"},
-			"playjohdss235": {streak: 0, score: 0, displayName: "PlayJos TV3"},
-			"playjvdfgbos236": {streak: 0, score: 0, displayName: "PlayJos TV3"},
-			"playjdghoss232": {streak: 0, score: 0, displayName: "PlayJos TV3"},
-			"playjtrosx2312": {streak: 0, score: 0, displayName: "PlayJos TV3"},
-			"playjfghcxos231": {streak: 0, score: 0, displayName: "PlayJos TV3"},
-		}
-
+		const players = this.scene.kahootGame.gameData.players;
 		let i = 0;
 
 		for (const username in players) {
@@ -143,6 +112,7 @@ export default class ScoreboardScreen extends Phaser.GameObjects.Container {
 			const scorePrefab = new PlayerScore(this.scene, 366, 630);
 			const y = 630 + (i * 130);
 
+			scorePrefab.renderScore(player.displayName, player.score, 'https://');
 			scorePrefab.setY(y);
 			this.v_list_elements.add(scorePrefab);
 
@@ -161,12 +131,18 @@ export default class ScoreboardScreen extends Phaser.GameObjects.Container {
 				ease: 'Linear',
 				onComplete: function () {
 					setTimeout(() => {
-						// Next question!
-						console.log('next question! from scoreboard')
-					}, 2000);
+						this.goToNextQuestion();
+					}, 1000);
 				}.bind(this)
 			});
 		}, 1000);
+	}
+
+	goToNextQuestion() {
+		// Next question!
+		console.log('[ScoreboardScene] Next question!');
+
+		this.scene.kahootGame.showNextQuestion();
 	}
 
 	renderMask() {

@@ -62,12 +62,14 @@
                     "id": "b1e6fac3-2784-4af7-b48c-41973bb03b1e",
                     "unlock": [
                         "x",
-                        "y"
+                        "y",
+                        "visible"
                     ],
                     "label": "contentScreen",
                     "scope": "CLASS",
                     "x": 0,
-                    "y": 0
+                    "y": 0,
+                    "visible": false
                 },
                 {
                     "prefabId": "5bf92373-11d5-4696-957f-836f2dc40569",
@@ -81,19 +83,35 @@
                     "scope": "CLASS",
                     "x": 0,
                     "y": 0,
-                    "visible": true
+                    "visible": false
                 },
                 {
                     "prefabId": "59c6530e-7ffb-41e4-8f03-b8a784d3c1ba",
                     "id": "8a355e44-6a70-4bdd-a38f-62e43db773c9",
                     "unlock": [
                         "x",
-                        "y"
+                        "y",
+                        "visible"
                     ],
                     "label": "scoreboardScreen",
                     "scope": "CLASS",
                     "x": 0,
-                    "y": 0
+                    "y": 0,
+                    "visible": false
+                },
+                {
+                    "prefabId": "6c257589-e384-4c77-a97c-299cdb0f673c",
+                    "id": "61204501-de15-45c1-9464-4afabb71a68e",
+                    "unlock": [
+                        "x",
+                        "y",
+                        "visible"
+                    ],
+                    "label": "podiumScreen",
+                    "scope": "CLASS",
+                    "x": 0,
+                    "y": 0,
+                    "visible": false
                 }
             ]
         }

@@ -156,7 +156,9 @@ export default class ContentScreen extends Phaser.GameObjects.Container {
 		console.log('renderScreen() text:', questionJSON.title)
 		// use questionJSON.title for content type questions
 		this.question_txt.setText(questionJSON.title);
+		this.question_txt["__AutoSizeTextComponent"].refreshCalculations();
 		this.desc_txt.setText(questionJSON.description);
+		this.desc_txt["__AutoSizeTextComponent"].refreshCalculations();
 
 		this.scene.tweens.add({
 			targets: this.load_rect.roundedRect,

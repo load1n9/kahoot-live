@@ -24,6 +24,7 @@ export default class QuizScreen extends Phaser.GameObjects.Container {
 
 		// kahoot_game_safe_area
 		const kahoot_game_safe_area = scene.add.image(540, 960, "kahoot_game@4x", "kahoot_game/safe_area");
+		kahoot_game_safe_area.visible = false;
 		this.add(kahoot_game_safe_area);
 
 		// kahoot_game_kahoot_logo_white
@@ -50,13 +51,14 @@ export default class QuizScreen extends Phaser.GameObjects.Container {
 		// question_txt
 		const question_txt = scene.add.text(-17, 415, "", {});
 		question_txt.setOrigin(0.5, 0.5);
-		question_txt.text = "Loading Content";
+		question_txt.text = "QuizScreen";
 		question_txt.setStyle({ "align": "center", "color": "#333333", "fontFamily": "Montserrat", "fontSize": "70px", "fontStyle": "bold", "stroke": "#333333", "strokeThickness":3});
 		question_txt.setWordWrapWidth(820);
 		title_container.add(question_txt);
 
 		// v_answer_buttons
 		const v_answer_buttons = scene.add.container(0, 0);
+		v_answer_buttons.visible = false;
 		this.add(v_answer_buttons);
 
 		// layout2
@@ -87,7 +89,7 @@ export default class QuizScreen extends Phaser.GameObjects.Container {
 		layout3.add(btn_2);
 
 		// v_question_active
-		const v_question_active = scene.add.container(0, 0);
+		const v_question_active = scene.add.container(0, 68);
 		v_question_active.visible = false;
 		this.add(v_question_active);
 
@@ -159,6 +161,7 @@ export default class QuizScreen extends Phaser.GameObjects.Container {
 
 		// v_percentages
 		const v_percentages = scene.add.container(0, 0);
+		v_percentages.visible = false;
 		this.add(v_percentages);
 
 		// p_layout2
@@ -194,13 +197,105 @@ export default class QuizScreen extends Phaser.GameObjects.Container {
 		const percentage4_4 = new Percentage(scene, 823, 872);
 		p_layout4.add(percentage4_4);
 
+		// title_container_bigger
+		const title_container_bigger = scene.add.container(557.0685424804688, 48.74837875366211);
+		title_container_bigger.visible = false;
+		this.add(title_container_bigger);
+
+		// container_233
+		const container_233 = scene.add.container(0, 0);
+		title_container_bigger.add(container_233);
+
+		// rectangle_1222x
+		const rectangle_1222x = scene.add.rectangle(-19, 469, 820, 128);
+		rectangle_1222x.scaleY = 2.5808821763745464;
+		rectangle_1222x.isFilled = true;
+		container_233.add(rectangle_1222x);
+
+		// question_big_txt
+		const question_big_txt = scene.add.text(-17, 460, "", {});
+		question_big_txt.setOrigin(0.5, 0.5);
+		question_big_txt.text = "Loading Content";
+		question_big_txt.setStyle({ "align": "center", "color": "#333333", "fontFamily": "Montserrat", "fontSize": "70px", "fontStyle": "bold", "stroke": "#333333", "strokeThickness":3});
+		question_big_txt.setWordWrapWidth(820);
+		title_container_bigger.add(question_big_txt);
+
+		// v_type_in_chat
+		const v_type_in_chat = scene.add.container(559, 668);
+		v_type_in_chat.visible = false;
+		this.add(v_type_in_chat);
+
+		// container_233g
+		const container_233g = scene.add.container(0, 0);
+		v_type_in_chat.add(container_233g);
+
+		// rectangle_1222xa
+		const rectangle_1222xa = scene.add.rectangle(-19, 469, 820, 128);
+		rectangle_1222xa.scaleY = 1.2617045062934324;
+		rectangle_1222xa.isFilled = true;
+		rectangle_1222xa.fillColor = 1272014;
+		container_233g.add(rectangle_1222xa);
+
+		// question_big_txta
+		const question_big_txta = scene.add.text(-17, 460, "", {});
+		question_big_txta.setOrigin(0.5, 0.5);
+		question_big_txta.text = "Type your answer!";
+		question_big_txta.setStyle({ "align": "center", "color": "#ffffffff", "fontFamily": "Montserrat", "fontSize": "70px", "fontStyle": "bold", "stroke": "#333333", "strokeThickness":3});
+		question_big_txta.setWordWrapWidth(820);
+		v_type_in_chat.add(question_big_txta);
+
+		// v_open_ended_results
+		const v_open_ended_results = scene.add.container(0, 0);
+		v_open_ended_results.visible = false;
+		this.add(v_open_ended_results);
+
+		// containerxd
+		const containerxd = scene.add.container(561, 479);
+		v_open_ended_results.add(containerxd);
+
+		// rectangle_1222xxdx
+		const rectangle_1222xxdx = scene.add.rectangle(-19, 474.4155578613281, 820, 128);
+		rectangle_1222xxdx.scaleY = 2.2994474597166916;
+		rectangle_1222xxdx.isFilled = true;
+		rectangle_1222xxdx.fillColor = 2459404;
+		containerxd.add(rectangle_1222xxdx);
+
+		// rectangle_2
+		const rectangle_2 = scene.add.rectangle(-18, 418, 0, 128);
+		rectangle_2.isFilled = true;
+		containerxd.add(rectangle_2);
+
+		// question_big_txt_1
+		const question_big_txt_1 = scene.add.text(540, 747, "", {});
+		question_big_txt_1.setOrigin(0.5, 0.5);
+		question_big_txt_1.text = "The correct answer(s) were";
+		question_big_txt_1.setStyle({ "align": "center", "color": "#ffffffff", "fontFamily": "Montserrat", "fontSize": "50px", "fontStyle": "bold", "stroke": "#333333", "strokeThickness":8});
+		question_big_txt_1.setWordWrapWidth(820);
+		v_open_ended_results.add(question_big_txt_1);
+
+		// oe_correct_txt
+		const oe_correct_txt = scene.add.text(540, 948, "", {});
+		oe_correct_txt.setOrigin(0.5, 0.5);
+		oe_correct_txt.text = "...";
+		oe_correct_txt.setStyle({ "align": "center", "color": "#ffffffff", "fontFamily": "Montserrat", "fontSize": "130px", "fontStyle": "bold", "stroke": "#333333", "strokeThickness":8,"shadow.offsetX":2,"shadow.offsetY":2,"shadow.stroke":true});
+		oe_correct_txt.setWordWrapWidth(820);
+		v_open_ended_results.add(oe_correct_txt);
+
+		// question_big_txt_3
+		const question_big_txt_3 = scene.add.text(536, 1151, "", {});
+		question_big_txt_3.setOrigin(0.5, 0.5);
+		question_big_txt_3.text = "(no one lost their streak)";
+		question_big_txt_3.setStyle({ "align": "center", "color": "#ffffffff", "fontFamily": "Montserrat", "fontSize": "40px", "fontStyle": "bold", "stroke": "#333333", "strokeThickness":7});
+		question_big_txt_3.setWordWrapWidth(820);
+		v_open_ended_results.add(question_big_txt_3);
+
 		// rectangle_1 (components)
 		const rectangle_1RoundedRectangleComponent = new RoundedRectangleComponent(rectangle_1);
 		rectangle_1RoundedRectangleComponent.radius = 20;
 
 		// question_txt (components)
 		const question_txtAutoSizeTextComponent = new AutoSizeTextComponent(question_txt);
-		question_txtAutoSizeTextComponent.maxWidth = 820;
+		question_txtAutoSizeTextComponent.maxWidth = 800;
 		question_txtAutoSizeTextComponent.maxHeight = 200;
 
 		// btn2_1 (prefab fields)
@@ -233,8 +328,41 @@ export default class QuizScreen extends Phaser.GameObjects.Container {
 		// percentage2_2 (prefab fields)
 		percentage2_2.fillColor = "#0565daff";
 
+		// rectangle_1222x (components)
+		const rectangle_1222xRoundedRectangleComponent = new RoundedRectangleComponent(rectangle_1222x);
+		rectangle_1222xRoundedRectangleComponent.radius = 20;
+
+		// question_big_txt (components)
+		const question_big_txtAutoSizeTextComponent = new AutoSizeTextComponent(question_big_txt);
+		question_big_txtAutoSizeTextComponent.maxWidth = 800;
+		question_big_txtAutoSizeTextComponent.maxHeight = 300;
+
+		// rectangle_1222xa (components)
+		const rectangle_1222xaRoundedRectangleComponent = new RoundedRectangleComponent(rectangle_1222xa);
+		rectangle_1222xaRoundedRectangleComponent.radius = 20;
+
+		// rectangle_1222xxdx (components)
+		const rectangle_1222xxdxRoundedRectangleComponent = new RoundedRectangleComponent(rectangle_1222xxdx);
+		rectangle_1222xxdxRoundedRectangleComponent.radius = 20;
+
+		// question_big_txt_1 (components)
+		const question_big_txt_1AutoSizeTextComponent = new AutoSizeTextComponent(question_big_txt_1);
+		question_big_txt_1AutoSizeTextComponent.maxWidth = 820;
+		question_big_txt_1AutoSizeTextComponent.maxHeight = 320;
+
+		// oe_correct_txt (components)
+		const oe_correct_txtAutoSizeTextComponent = new AutoSizeTextComponent(oe_correct_txt);
+		oe_correct_txtAutoSizeTextComponent.maxWidth = 750;
+		oe_correct_txtAutoSizeTextComponent.maxHeight = 100;
+
+		// question_big_txt_3 (components)
+		const question_big_txt_3AutoSizeTextComponent = new AutoSizeTextComponent(question_big_txt_3);
+		question_big_txt_3AutoSizeTextComponent.maxWidth = 820;
+		question_big_txt_3AutoSizeTextComponent.maxHeight = 320;
+
 		this.rectangle_1 = rectangle_1;
 		this.question_txt = question_txt;
+		this.title_container = title_container;
 		this.btn2_1 = btn2_1;
 		this.btn2_2 = btn2_2;
 		this.layout2 = layout2;
@@ -257,6 +385,16 @@ export default class QuizScreen extends Phaser.GameObjects.Container {
 		this.percentage4_4 = percentage4_4;
 		this.p_layout4 = p_layout4;
 		this.v_percentages = v_percentages;
+		this.rectangle_1222x = rectangle_1222x;
+		this.question_big_txt = question_big_txt;
+		this.title_container_bigger = title_container_bigger;
+		this.rectangle_1222xa = rectangle_1222xa;
+		this.v_type_in_chat = v_type_in_chat;
+		this.rectangle_1222xxdx = rectangle_1222xxdx;
+		this.question_big_txt_1 = question_big_txt_1;
+		this.oe_correct_txt = oe_correct_txt;
+		this.question_big_txt_3 = question_big_txt_3;
+		this.v_open_ended_results = v_open_ended_results;
 
 		/* START-USER-CTR-CODE */
 		// Write your code here.
@@ -267,6 +405,8 @@ export default class QuizScreen extends Phaser.GameObjects.Container {
 	rectangle_1;
 	/** @type {Phaser.GameObjects.Text} */
 	question_txt;
+	/** @type {Phaser.GameObjects.Container} */
+	title_container;
 	/** @type {QuizButton} */
 	btn2_1;
 	/** @type {QuizButton} */
@@ -311,37 +451,87 @@ export default class QuizScreen extends Phaser.GameObjects.Container {
 	p_layout4;
 	/** @type {Phaser.GameObjects.Container} */
 	v_percentages;
+	/** @type {Phaser.GameObjects.Rectangle} */
+	rectangle_1222x;
+	/** @type {Phaser.GameObjects.Text} */
+	question_big_txt;
+	/** @type {Phaser.GameObjects.Container} */
+	title_container_bigger;
+	/** @type {Phaser.GameObjects.Rectangle} */
+	rectangle_1222xa;
+	/** @type {Phaser.GameObjects.Container} */
+	v_type_in_chat;
+	/** @type {Phaser.GameObjects.Rectangle} */
+	rectangle_1222xxdx;
+	/** @type {Phaser.GameObjects.Text} */
+	question_big_txt_1;
+	/** @type {Phaser.GameObjects.Text} */
+	oe_correct_txt;
+	/** @type {Phaser.GameObjects.Text} */
+	question_big_txt_3;
+	/** @type {Phaser.GameObjects.Container} */
+	v_open_ended_results;
 
 	/* START-USER-CODE */
 
 	// Write your code here.
 
-	renderScreen(kahootGame, questionJSON) {
+	renderScreen(kahootGame, questionJSON, quizType = 'quiz') {
 		this.kahootGame = kahootGame;
 		this.questionJSON = questionJSON;
+		this.quizType = quizType;
 
 		console.log('renderScreen() text:', questionJSON.title)
 		// use questionJSON.title for content type questions
 		this.question_txt.setText(questionJSON.question);
+		this.question_txt["__AutoSizeTextComponent"].refreshCalculations();
+		this.answers_txt.setText('0');
+		this.answers_txt["__AutoSizeTextComponent"].refreshCalculations();
+		this.v_open_ended_results.setVisible(false);
 
 		const choices = questionJSON.choices;
-
 		console.log('choices', choices, choices.length)
 
 		const layoutNumber = 2; //todo: choices.length;
 
-		this[`layout${layoutNumber}`].setVisible(true);
+		console.log('TYPE', this.quizType)
 
-		for (let i = 0; i < layoutNumber; i++) {
-			const button = this[`btn${layoutNumber}_${i+1}`];
-			const choice = choices[i];
+		if (this.quizType === 'open_ended') {
+			this.v_answer_buttons.setVisible(false);
+			this.title_container.setVisible(false);
+			this.title_container_bigger.setVisible(true);
+			this.v_question_active.setY(99);
+			this.v_percentages.setY(99);
+			this.v_type_in_chat.setVisible(true);
 
-			button.renderButton(i, choice);
+			this.question_big_txt.setText(questionJSON.question);
+			this.question_big_txt["__AutoSizeTextComponent"].refreshCalculations();
+		} else {
+			// Show buttons
+			this[`layout${layoutNumber}`].setVisible(true);
+			this.v_answer_buttons.setVisible(true);
+			this.title_container.setVisible(true);
+			this.title_container_bigger.setVisible(false);
+			this.v_question_active.setY(0);
+			this.v_percentages.setY(0);
+			this.v_type_in_chat.setVisible(false);
+
+			for (let i = 0; i < layoutNumber; i++) {
+				const button = this[`btn${layoutNumber}_${i+1}`];
+				const choice = choices[i];
+
+				button.renderButton(i, choice);
+			}
 		}
 
 		this.v_question_active.setVisible(true);
 		this.v_percentages.setVisible(false);
 		this.startTimer(questionJSON.time);
+
+		// Play Music
+		// todo: 20s, 30s, 60s
+		this.kahootGame.stopAllMusic();
+		this.kahootGame.music.kahoot_quiz_30.play();
 	}
 
 	startTimer(timeMS) {
@@ -368,7 +558,6 @@ export default class QuizScreen extends Phaser.GameObjects.Container {
 
 	onTimerFinished() {
 		// Show final answer percentages
-		this.v_percentages.setVisible(true);
 		this.v_question_active.setVisible(false);
 
 		// Calculate Percentages
@@ -379,14 +568,36 @@ export default class QuizScreen extends Phaser.GameObjects.Container {
 		const choices = this.questionJSON.choices;
 		const layoutNumber = 2; //todo: choices.length;
 
-		this[`p_layout${layoutNumber}`].setVisible(true);
+		const allAnswers = [];
 
-		for (let i = 0; i < layoutNumber; i++) {
-			const percentage = this[`percentage${layoutNumber}_${i+1}`];
-			const choice = choices[i];
-
-			percentage.renderPercentage(i, choice, percentages);
+		// Loop through the choices array and extract the answer strings
+		for (const choice of choices) {
+			allAnswers.push(choice.answer);
 		}
+
+		if (this.quizType === 'open_ended') {
+			this.v_open_ended_results.setVisible(true);
+			this.v_type_in_chat.setVisible(false);
+			this.oe_correct_txt.setText(allAnswers.join('/'));
+		} else {
+			this[`p_layout${layoutNumber}`].setVisible(true);
+			this.v_percentages.setVisible(true);
+
+			for (let i = 0; i < layoutNumber; i++) {
+				const percentage = this[`percentage${layoutNumber}_${i+1}`];
+				const choice = choices[i];
+
+				percentage.renderPercentage(i, choice, percentages);
+			}
+		}
+
+		// Show scoreboard
+		setTimeout(() => {
+			this[`p_layout${layoutNumber}`].setVisible(false);
+			this.kahootGame.hideScreens();
+			this.kahootGame.scoreboardScreen.renderScoreboard();
+			this.kahootGame.scoreboardScreen.setVisible(true);
+		}, 3000);
 	}
 
 	calculateOptionPercentages(answers, maxValue = 100) {

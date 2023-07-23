@@ -38,7 +38,8 @@
                         "frame": "kahoot_game/safe_area"
                     },
                     "x": 540,
-                    "y": 960
+                    "y": 960,
+                    "visible": false
                 },
                 {
                     "type": "Image",
@@ -58,6 +59,7 @@
                     "type": "Container",
                     "id": "1f50c29c-81f5-4d36-8f6a-fc4c2ee7debe",
                     "label": "title_container",
+                    "scope": "CLASS",
                     "x": 559,
                     "y": 51,
                     "list": [
@@ -93,13 +95,13 @@
                             "components": [
                                 "AutoSizeTextComponent"
                             ],
-                            "AutoSizeTextComponent.maxWidth": 820,
+                            "AutoSizeTextComponent.maxWidth": 800,
                             "AutoSizeTextComponent.maxHeight": 200,
                             "x": -17,
                             "y": 415,
                             "originX": 0.5,
                             "originY": 0.5,
-                            "text": "Loading Content",
+                            "text": "QuizScreen",
                             "align": "center",
                             "fontFamily": "Montserrat",
                             "fontSize": "70px",
@@ -116,6 +118,7 @@
                     "id": "f00439d7-a658-4979-96e9-edc670cd32ef",
                     "label": "v_answer_buttons",
                     "scope": "CLASS",
+                    "visible": false,
                     "list": [
                         {
                             "type": "Container",
@@ -201,6 +204,7 @@
                     "id": "7b991ee0-a627-416e-9ff7-de021b0fd0ed",
                     "label": "v_question_active",
                     "scope": "CLASS",
+                    "y": 68,
                     "visible": false,
                     "list": [
                         {
@@ -356,6 +360,7 @@
                     "id": "3792c523-10e6-4fde-9989-ee6a9fd8c42a",
                     "label": "v_percentages",
                     "scope": "CLASS",
+                    "visible": false,
                     "list": [
                         {
                             "type": "Container",
@@ -450,6 +455,237 @@
                                     "y": 872
                                 }
                             ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Container",
+                    "id": "bf36e403-0380-45eb-b738-76e1e5f88de4",
+                    "label": "title_container_bigger",
+                    "scope": "CLASS",
+                    "x": 557.0685424804688,
+                    "y": 48.74837875366211,
+                    "visible": false,
+                    "list": [
+                        {
+                            "type": "Container",
+                            "id": "6450afa2-fa3e-494c-966b-ffb1200526f7",
+                            "label": "container_233",
+                            "list": [
+                                {
+                                    "type": "Rectangle",
+                                    "id": "950c78cf-2f9a-40b8-ac2d-97487f684f06",
+                                    "label": "rectangle_1222x",
+                                    "scope": "CLASS",
+                                    "components": [
+                                        "RoundedRectangleComponent"
+                                    ],
+                                    "RoundedRectangleComponent.radius": 20,
+                                    "x": -19,
+                                    "y": 469,
+                                    "scaleY": 2.5808821763745464,
+                                    "isFilled": true,
+                                    "fillColor": "#ffffff",
+                                    "width": 820,
+                                    "height": 128
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Text",
+                            "id": "18b1f3c6-e9fe-4231-be2c-24874613df78",
+                            "label": "question_big_txt",
+                            "scope": "CLASS",
+                            "components": [
+                                "AutoSizeTextComponent"
+                            ],
+                            "AutoSizeTextComponent.maxWidth": 800,
+                            "AutoSizeTextComponent.maxHeight": 300,
+                            "x": -17,
+                            "y": 460,
+                            "originX": 0.5,
+                            "originY": 0.5,
+                            "text": "Loading Content",
+                            "align": "center",
+                            "fontFamily": "Montserrat",
+                            "fontSize": "70px",
+                            "fontStyle": "bold",
+                            "color": "#333333",
+                            "stroke": "#333333",
+                            "strokeThickness": 3,
+                            "wordWrapWidth": 820
+                        }
+                    ]
+                },
+                {
+                    "type": "Container",
+                    "id": "328f8373-225e-4f44-826d-1b1dc682e021",
+                    "label": "v_type_in_chat",
+                    "scope": "CLASS",
+                    "x": 559,
+                    "y": 668,
+                    "visible": false,
+                    "list": [
+                        {
+                            "type": "Container",
+                            "id": "a74c710e-0c24-4fad-a987-1f5da6ddbafc",
+                            "label": "container_233g",
+                            "list": [
+                                {
+                                    "type": "Rectangle",
+                                    "id": "ebd723e0-c2b5-4350-891f-a17a336fd40f",
+                                    "label": "rectangle_1222xa",
+                                    "scope": "CLASS",
+                                    "components": [
+                                        "RoundedRectangleComponent"
+                                    ],
+                                    "RoundedRectangleComponent.radius": 20,
+                                    "x": -19,
+                                    "y": 469,
+                                    "scaleY": 1.2617045062934324,
+                                    "isFilled": true,
+                                    "fillColor": "#1368CE",
+                                    "width": 820,
+                                    "height": 128
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Text",
+                            "id": "287473c2-1d10-48d2-8cb8-5eef241dc6a1",
+                            "label": "question_big_txta",
+                            "x": -17,
+                            "y": 460,
+                            "originX": 0.5,
+                            "originY": 0.5,
+                            "text": "Type your answer!",
+                            "align": "center",
+                            "fontFamily": "Montserrat",
+                            "fontSize": "70px",
+                            "fontStyle": "bold",
+                            "color": "#ffffffff",
+                            "stroke": "#333333",
+                            "strokeThickness": 3,
+                            "wordWrapWidth": 820
+                        }
+                    ]
+                },
+                {
+                    "type": "Container",
+                    "id": "b5e8c4df-21c4-42fe-b60d-0e846c1f30c7",
+                    "label": "v_open_ended_results",
+                    "scope": "CLASS",
+                    "visible": false,
+                    "list": [
+                        {
+                            "type": "Container",
+                            "id": "43df31cb-66f0-45db-9a48-92f42d5fa0d9",
+                            "label": "containerxd",
+                            "x": 561,
+                            "y": 479,
+                            "list": [
+                                {
+                                    "type": "Rectangle",
+                                    "id": "63b5ebad-31a4-4efd-9b5e-deb860e7f6c2",
+                                    "label": "rectangle_1222xxdx",
+                                    "scope": "CLASS",
+                                    "components": [
+                                        "RoundedRectangleComponent"
+                                    ],
+                                    "RoundedRectangleComponent.radius": 20,
+                                    "x": -19,
+                                    "y": 474.4155578613281,
+                                    "scaleY": 2.2994474597166916,
+                                    "isFilled": true,
+                                    "fillColor": "#25870C",
+                                    "width": 820,
+                                    "height": 128
+                                },
+                                {
+                                    "type": "Rectangle",
+                                    "id": "a2d7d7f8-c83c-4484-902c-23d87eb9ca45",
+                                    "label": "rectangle_2",
+                                    "x": -18,
+                                    "y": 418,
+                                    "isFilled": true,
+                                    "height": 128
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Text",
+                            "id": "0ec5855a-0720-4770-944e-3ad92b0cde46",
+                            "label": "question_big_txt_1",
+                            "scope": "CLASS",
+                            "components": [
+                                "AutoSizeTextComponent"
+                            ],
+                            "AutoSizeTextComponent.maxWidth": 820,
+                            "AutoSizeTextComponent.maxHeight": 320,
+                            "x": 540,
+                            "y": 747,
+                            "originX": 0.5,
+                            "originY": 0.5,
+                            "text": "The correct answer(s) were",
+                            "align": "center",
+                            "fontFamily": "Montserrat",
+                            "fontSize": "50px",
+                            "fontStyle": "bold",
+                            "color": "#ffffffff",
+                            "stroke": "#333333",
+                            "strokeThickness": 8,
+                            "wordWrapWidth": 820
+                        },
+                        {
+                            "type": "Text",
+                            "id": "05864dc2-cfa5-40e4-84c6-228a322c8c44",
+                            "label": "oe_correct_txt",
+                            "scope": "CLASS",
+                            "components": [
+                                "AutoSizeTextComponent"
+                            ],
+                            "AutoSizeTextComponent.maxWidth": 750,
+                            "AutoSizeTextComponent.maxHeight": 100,
+                            "x": 540,
+                            "y": 948,
+                            "originX": 0.5,
+                            "originY": 0.5,
+                            "text": "...",
+                            "align": "center",
+                            "fontFamily": "Montserrat",
+                            "fontSize": "130px",
+                            "fontStyle": "bold",
+                            "color": "#ffffffff",
+                            "stroke": "#333333",
+                            "strokeThickness": 8,
+                            "shadow.offsetX": 2,
+                            "shadow.offsetY": 2,
+                            "shadow.stroke": true,
+                            "wordWrapWidth": 820
+                        },
+                        {
+                            "type": "Text",
+                            "id": "9dc3b4cf-a02d-48e3-8a31-79ea4ecf4fa3",
+                            "label": "question_big_txt_3",
+                            "scope": "CLASS",
+                            "components": [
+                                "AutoSizeTextComponent"
+                            ],
+                            "AutoSizeTextComponent.maxWidth": 820,
+                            "AutoSizeTextComponent.maxHeight": 320,
+                            "x": 536,
+                            "y": 1151,
+                            "originX": 0.5,
+                            "originY": 0.5,
+                            "text": "(no one lost their streak)",
+                            "align": "center",
+                            "fontFamily": "Montserrat",
+                            "fontSize": "40px",
+                            "fontStyle": "bold",
+                            "color": "#ffffffff",
+                            "stroke": "#333333",
+                            "strokeThickness": 7,
+                            "wordWrapWidth": 820
                         }
                     ]
                 }
