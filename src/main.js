@@ -1,4 +1,4 @@
-import Phaser from "phaser"
+import Phaser from "phaser";
 import Level from "./scenes/Level";
 import Preload from "./scenes/Preload";
 import RoundRectanglePlugin from 'phaser3-rex-plugins/plugins/roundrectangle-plugin.js';
